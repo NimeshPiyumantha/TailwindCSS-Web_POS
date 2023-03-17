@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tailwindcss -i ./input-style.css -o ./public/output-style.css",
+    "build": "tailwindcss -i ./src/input-style.css -o ./public/output-style.css",
     "watch-css" : "npx tailwindcss -i ./src/input-style.css -o ./public/output-style.css --watch"
   },
   "author": "Nimma",
