@@ -1,62 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="output-style.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output-style.css" />
     <title>WEB POS</title>
-</head>
-<body>
-<!-- Navbar -->
-<nav class="relative container mx-auto p-6">
-    <!-- Flex container -->
-    <div class="flex items-center justify-between">
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="relative container mx-auto p-6">
+      <!-- Flex container -->
+      <div class="flex items-center justify-between">
         <!-- Logo -->
         <div class="pt-2">
-            <img src="../assets/img/logo.svg" height="166" width="200"/>
+          <img src="../assets/img/logo.svg" height="166" width="200" />
         </div>
         <!-- Menu Items -->
         <div class="hidden space-x-6 md:flex">
-            <a href="#" class="hover:text-darkGrayishBlue">Home</a>
-            <a href="#" class="hover:text-darkGrayishBlue">Customer</a>
-            <a href="#" class="hover:text-darkGrayishBlue">Items</a>
-            <a href="#" class="hover:text-darkGrayishBlue">Place Order</a>
-            <a href="#" class="hover:text-darkGrayishBlue">Order Details</a>
+          <a href="#" class="hover:text-darkGrayishBlue font-semibold">Home</a>
+          <a href="#" class="hover:text-darkGrayishBlue font-semibold">Customer</a>
+          <a href="#" class="hover:text-darkGrayishBlue font-semibold">Items</a>
+          <a href="#" class="hover:text-darkGrayishBlue font-semibold">Place Order</a>
+          <a href="#" class="hover:text-darkGrayishBlue font-semibold">Order Details</a>
         </div>
         <!-- Button -->
         <a
-                href="#"
-                class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block"
-        >Get Started</a
+          href="#"
+          class="hidden p-3 px-6 pt-2 text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block font-bold"
+          >Sign Out</a
         >
 
         <!-- Hamburger Icon -->
         <button
-                id="menu-btn"
-                class="block hamburger md:hidden focus:outline-none"
+          id="menu-btn"
+          class="block hamburger md:hidden focus:outline-none"
         >
-            <span class="hamburger-top"></span>
-            <span class="hamburger-middle"></span>
-            <span class="hamburger-bottom"></span>
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
         </button>
-    </div>
+      </div>
 
-    <!-- Mobile Menu -->
-    <div class="md:hidden">
+      <!-- Mobile Menu -->
+      <div class="md:hidden">
         <div
-                id="menu"
-                class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+          id="menu"
+          class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
         >
-            <a href="#">Pricing</a>
-            <a href="#">Product</a>
-            <a href="#">About Us</a>
-            <a href="#">Careers</a>
-            <a href="#">Community</a>
+          <a href="#">Home</a>
+          <a href="#">Customer</a>
+          <a href="#">Items</a>
+          <a href="#">Place Order</a>
+          <a href="#">Order Details</a>
         </div>
-    </div>
-</nav>
-
-
-</body>
+      </div>
+    </nav>
+  </body>
 </html>
