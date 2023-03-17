@@ -1,0 +1,29 @@
+{
+  "name": "tailwindcss-web_pos",
+  "version": "1.0.0",
+  "description": "This is learning tailwindcss Framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS.git"
+  },
+  "keywords": [
+    "CSS",
+    "HTML",
+    "Tailwindcss",
+    "JavaScript",
+    "AJAX"
+  ],
+  "author": "Nimma",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS/issues"
+  },
+  "homepage": "https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.2.7"
+  }
+}
