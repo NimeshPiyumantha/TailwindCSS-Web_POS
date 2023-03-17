@@ -23,7 +23,4 @@
     "url": "https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS/issues"
   },
   "homepage": "https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS#readme",
-  "devDependencies": {
-    "tailwindcss": "^3.2.7"
-  }
 }
