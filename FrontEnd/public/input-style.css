@@ -14,10 +14,10 @@ body {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   body {
     background-position: 50px -50px;
-    background-size: 500px;
+    background-size: 700px;
   }
   #cta {
     background-image: url("../assets/img/bg-simplify-section-mobile.svg");

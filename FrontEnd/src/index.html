@@ -26,19 +26,19 @@
     <title>WEB POS</title>
   </head>
   <body>
-    <header class="font-Pooppins text-xl">
+    <header>
       <!-- Navbar -->
-      <nav class="relative container mx-auto p-3 mt-1 sectionBorder fixed">
+      <nav class=" container mx-auto p-3 mt-1 sectionBorder font-Pooppins text-xl sm:text-sm relative">
         <!-- Flex container -->
         <div class="flex items-center justify-between">
           <!-- Logo -->
           <div class="">
-            <h3 class="font-semibold text-2xl text-brightRed ml-3">
+            <h3 class="font-semibold text-2xl sm:text-lg text-brightRed ml-3">
               RIO Magic
             </h3>
           </div>
           <!-- Menu Items -->
-          <div class="hidden space-x-6 md:flex sm:flex">
+          <div class="hidden space-x-5 lg:flex md:flex">
             <a href="#" class="hover:text-darkGrayishBlue font-semibold"
               >Home</a
             >
@@ -77,13 +77,18 @@
         <div class="md:hidden">
           <div
             id="menu"
-            class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+            class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white md:-auto md:self-auto left-6 right-6 drop-shadow-md z-50"
           >
             <a href="#">Home</a>
             <a href="#">Customer</a>
             <a href="#">Items</a>
             <a href="#">Place Order</a>
             <a href="#">Order Details</a>
+            <a
+              href="#"
+              class="mr-3 p-3 px-7 py-2 text-center text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight font-bold"
+              >Sign Out</a
+            >
           </div>
         </div>
       </nav>
@@ -120,7 +125,17 @@
           >
             <!-- Customer Details Search Section -->
             <div
-              class="grid md:grid-cols-4 lg:grid-cols-5 bg-slate-50 p-0 mt-4 rounded sectionBorder h-full"
+              class="grid md:grid-cols-3 lg:grid-cols-4 m-1 bg-slate-50 p-0 mt-4 rounded sectionBorder h-full"
+            >
+              <h4
+                class="text-center p-2 text-white rounded font-Pooppins bg-green-300"
+              >
+                Manage Customer
+              </h4>
+            </div>
+
+            <div
+              class="grid md:grid-cols-4 lg:grid-cols-5 m-1 bg-slate-50 p-0 mt-4 rounded sectionBorder h-full"
             >
               <h4
                 class="text-center p-2 text-white rounded font-Pooppins bg-green-300"
