@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="output-style.css" />
+    <title>WEB POS</title>
+  </head>
+  <body>
+    <header class="">
+      <!-- Navbar -->
+      <nav class="relative container mx-auto p-3 mt-1 sectionBorder fixed">
+        <!-- Flex container -->
+        <div class="flex items-center justify-between">
+          <!-- Logo -->
+          <div class="">
+            <h3 class="font-semibold text-2xl text-orange-600">Nimma</h3>
+          </div>
+          <!-- Menu Items -->
+          <div class="hidden space-x-6 md:flex sm:flex">
+            <a href="#" class="hover:text-darkGrayishBlue font-semibold"
+              >Home</a
+            >
+            <a href="#" class="hover:text-darkGrayishBlue font-semibold"
+              >Customer</a
+            >
+            <a href="#" class="hover:text-darkGrayishBlue font-semibold"
+              >Items</a
+            >
+            <a href="#" class="hover:text-darkGrayishBlue font-semibold"
+              >Place Order</a
+            >
+            <a href="#" class="hover:text-darkGrayishBlue font-semibold"
+              >Order Details</a
+            >
+          </div>
+          <!-- Button -->
+          <a
+            href="#"
+            class="hidden p-3 px-7 py-2 text-center text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block font-bold"
+            >Sign Out</a
+          >
+
+          <!-- Hamburger Icon -->
+          <button
+            id="menu-btn"
+            class="block hamburger md:hidden focus:outline-none"
+          >
+            <span class="hamburger-top"></span>
+            <span class="hamburger-middle"></span>
+            <span class="hamburger-bottom"></span>
+          </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden">
+          <div
+            id="menu"
+            class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white sm:w-auto sm:self-center left-6 right-6 drop-shadow-md"
+          >
+            <a href="#">Home</a>
+            <a href="#">Customer</a>
+            <a href="#">Items</a>
+            <a href="#">Place Order</a>
+            <a href="#">Order Details</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Customer Section -->
+      <section id="customer flex">
+        <!-- Flex Container -->
+        <div
+          class="bg-red-300 h-full w-full container flex flex-col-reverse items-center px-6 mx-auto mt-10 space-y-0 md:space-y-0 md:flex-row"
+        >
+          <div class="relative inline-block mt-3 lg:mt-4 md:mt-4"></div>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
