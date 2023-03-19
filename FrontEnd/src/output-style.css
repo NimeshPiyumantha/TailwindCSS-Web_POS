@@ -3400,6 +3400,11 @@ body {
 }
 
 @media (min-width: 480px) {
+  .sm\:columns-sm {
+    -moz-columns: 24rem;
+         columns: 24rem;
+  }
+
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -3408,6 +3413,16 @@ body {
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .sm\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 }
 
@@ -3458,6 +3473,11 @@ body {
 
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:columns-lg {
+    -moz-columns: 32rem;
+         columns: 32rem;
   }
 
   .lg\:text-2xl {

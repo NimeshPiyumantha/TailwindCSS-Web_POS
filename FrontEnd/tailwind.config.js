@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+// lg:text-xl  sm:text-sm
 module.exports = {
   content: ["src/*.{html,js}", "./node_modules/tw-elements/dist/js/**/*.js"],
   theme: {
