@@ -3630,6 +3630,11 @@ body {
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 @media not all and (min-width: 768px) {
