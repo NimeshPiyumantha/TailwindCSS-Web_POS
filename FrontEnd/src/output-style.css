@@ -724,6 +724,26 @@ video {
   grid-row: span 1 / span 1;
 }
 
+.row-auto {
+  grid-row: auto;
+}
+
+.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.row-span-3 {
+  grid-row: span 3 / span 3;
+}
+
+.row-span-4 {
+  grid-row: span 4 / span 4;
+}
+
+.row-start-1 {
+  grid-row-start: 1;
+}
+
 .float-right {
   float: right;
 }
@@ -1240,6 +1260,10 @@ video {
   flex-shrink: 0;
 }
 
+.flex-grow-0 {
+  flex-grow: 0;
+}
+
 .grow {
   flex-grow: 1;
 }
@@ -1403,12 +1427,21 @@ video {
        columns: 32rem;
 }
 
+.columns-1 {
+  -moz-columns: 1;
+       columns: 1;
+}
+
 .\!flex-row {
   flex-direction: row !important;
 }
 
 .flex-row {
   flex-direction: row;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse;
 }
 
 .flex-col {
@@ -3533,6 +3566,10 @@ body {
          columns: 24rem;
   }
 
+  .sm\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
   .sm\:p-4 {
     padding: 1rem;
   }
@@ -3579,8 +3616,22 @@ body {
     display: none;
   }
 
+  .md\:columns-lg {
+    -moz-columns: 32rem;
+         columns: 32rem;
+  }
+
+  .md\:columns-md {
+    -moz-columns: 28rem;
+         columns: 28rem;
+  }
+
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -3616,6 +3667,26 @@ body {
          columns: 32rem;
   }
 
+  .lg\:columns-5 {
+    -moz-columns: 5;
+         columns: 5;
+  }
+
+  .lg\:columns-2 {
+    -moz-columns: 2;
+         columns: 2;
+  }
+
+  .lg\:columns-3 {
+    -moz-columns: 3;
+         columns: 3;
+  }
+
+  .lg\:columns-1 {
+    -moz-columns: 1;
+         columns: 1;
+  }
+
   .lg\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -3649,6 +3720,12 @@ body {
   .lg\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .xl\:flex {
+    display: flex;
   }
 }
 
