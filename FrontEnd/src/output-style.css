@@ -3635,6 +3635,21 @@ body {
     font-size: 1.875rem;
     line-height: 2.25rem;
   }
+
+  .lg\:text-xs {
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  .lg\:text-sm {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 @media not all and (min-width: 768px) {
