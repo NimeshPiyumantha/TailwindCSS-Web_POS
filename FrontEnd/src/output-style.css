@@ -780,6 +780,10 @@ video {
   margin: 3rem;
 }
 
+.m-6 {
+  margin: 1.5rem;
+}
+
 .\!my-0 {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
@@ -1932,6 +1936,16 @@ video {
 .bg-darkGrayishBlue {
   --tw-bg-opacity: 1;
   background-color: hsl(227 12% 61% / var(--tw-bg-opacity));
+}
+
+.bg-orange-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
+}
+
+.bg-red-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
 .from-current {
