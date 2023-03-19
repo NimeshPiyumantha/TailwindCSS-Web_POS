@@ -772,6 +772,14 @@ video {
   margin: 0.5rem;
 }
 
+.m-10 {
+  margin: 2.5rem;
+}
+
+.m-12 {
+  margin: 3rem;
+}
+
 .\!my-0 {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
@@ -914,6 +922,14 @@ video {
 
 .mt-12 {
   margin-top: 3rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
 }
 
 .box-border {
@@ -1078,6 +1094,10 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-12 {
+  height: 3rem;
 }
 
 .max-h-\[calc\(100\%-64px\)\] {
@@ -1274,6 +1294,10 @@ video {
 
 .basis-auto {
   flex-basis: auto;
+}
+
+.table-auto {
+  table-layout: auto;
 }
 
 .origin-\[0_0\] {
@@ -1508,12 +1532,20 @@ video {
   align-self: flex-end;
 }
 
+.overflow-auto {
+  overflow: auto;
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
 
 .overflow-visible {
   overflow: visible;
+}
+
+.overflow-x-auto {
+  overflow-x: auto;
 }
 
 .overflow-y-auto {
@@ -1654,6 +1686,10 @@ video {
 
 .border-r-0 {
   border-right-width: 0px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
 }
 
 .\!border-solid {
@@ -1888,6 +1924,16 @@ video {
   background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
+.bg-brightRedSupLight {
+  --tw-bg-opacity: 1;
+  background-color: hsl(12 88% 95% / var(--tw-bg-opacity));
+}
+
+.bg-darkGrayishBlue {
+  --tw-bg-opacity: 1;
+  background-color: hsl(227 12% 61% / var(--tw-bg-opacity));
+}
+
 .from-current {
   --tw-gradient-from: currentColor;
   --tw-gradient-to: rgb(255 255 255 / 0);
@@ -2073,6 +2119,16 @@ video {
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-0 {
@@ -3559,6 +3615,21 @@ body {
     background-color: rgb(220 38 38 / var(--tw-bg-opacity));
   }
 
+  .dark\:bg-gray-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-gray-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(31 41 55 / var(--tw-bg-opacity));
+  }
+
+  .dark\:bg-white {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
   .dark\:fill-gray-400 {
     fill: #9ca3af;
   }
@@ -3586,6 +3657,11 @@ body {
   .dark\:text-black {
     --tw-text-opacity: 1;
     color: rgb(0 0 0 / var(--tw-text-opacity));
+  }
+
+  .dark\:text-gray-400 {
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 
   .dark\:placeholder-gray-400::-moz-placeholder {
