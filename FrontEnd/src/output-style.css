@@ -1928,6 +1928,10 @@ video {
   font-family: Poppins, sans-serif;
 }
 
+.font-Ubuntu {
+  font-family: Ubuntu, sans-serif;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1995,6 +1999,11 @@ video {
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -3388,6 +3397,10 @@ body {
     margin-top: 1rem;
   }
 
+  .md\:mt-3 {
+    margin-top: 0.75rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -3414,6 +3427,10 @@ body {
 @media (min-width: 976px) {
   .lg\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .lg\:mt-3 {
+    margin-top: 0.75rem;
   }
 }
 
