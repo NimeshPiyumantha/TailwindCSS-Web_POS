@@ -1,450 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@1,900&family=Ubuntu:wght@500&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:ital,wght@1,900&family=Ubuntu:wght@500&display=swap"
+            rel="stylesheet"
     />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="output-style.css" />
+    <link href="output-style.css" rel="stylesheet"/>
     <link
-      href="../assets/styles/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
+            href="../assets/styles/bootstrap-icons/bootstrap-icons.css"
+            rel="stylesheet"
     />
     <link
-      href="../assets/styles/sweetalert2-11.6.16/sweetalert2.min.css"
-      rel="stylesheet"
+            href="../assets/styles/sweetalert2-11.6.16/sweetalert2.min.css"
+            rel="stylesheet"
     />
     <title>WEB POS</title>
-  </head>
-  <body class="p-2">
-    <header>
-      <!-- Navbar -->
-      <nav
-        class="container mx-auto p-3 mt-1 sectionBorder font-Pooppins lg:text-xl sm:text-sm relative"
-      >
+</head>
+<body class="p-2">
+<header>
+    <!-- Navbar -->
+    <nav
+            class="container mx-auto p-3 mt-1 sectionBorder font-Pooppins lg:text-xl sm:text-sm relative"
+    >
         <!-- Flex container -->
         <div class="flex items-center justify-between">
-          <!-- Logo -->
-          <div class="">
-            <h3
-              class="font-semibold lg:text-2xl sm:text-lg text-brightRed ml-3"
-            >
-              RIO Magic
-            </h3>
-          </div>
-          <!-- Menu Items -->
-          <div class="hidden space-x-5 lg:flex md:flex">
-            <a href="#" class="hover:text-darkGrayishBlue font-semibold"
-              >Home</a
-            >
-            <a href="#" class="hover:text-darkGrayishBlue font-semibold"
-              >Customer</a
-            >
-            <a href="#" class="hover:text-darkGrayishBlue font-semibold"
-              >Items</a
-            >
-            <a href="#" class="hover:text-darkGrayishBlue font-semibold"
-              >Place Order</a
-            >
-            <a href="#" class="hover:text-darkGrayishBlue font-semibold"
-              >Order Details</a
-            >
-          </div>
-          <!-- Button -->
-          <a
-            href="#"
-            class="hidden mr-3 p-3 px-7 py-2 text-center text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block font-bold"
+            <!-- Logo -->
+            <div class="">
+                <h3
+                        class="font-semibold lg:text-2xl sm:text-lg text-brightRed ml-3"
+                >
+                    RIO Magic
+                </h3>
+            </div>
+            <!-- Menu Items -->
+            <div class="hidden space-x-5 lg:flex md:flex">
+                <a class="hover:text-darkGrayishBlue font-semibold" href="#"
+                >Home</a
+                >
+                <a class="hover:text-darkGrayishBlue font-semibold" href="#"
+                >Customer</a
+                >
+                <a class="hover:text-darkGrayishBlue font-semibold" href="#"
+                >Items</a
+                >
+                <a class="hover:text-darkGrayishBlue font-semibold" href="#"
+                >Place Order</a
+                >
+                <a class="hover:text-darkGrayishBlue font-semibold" href="#"
+                >Order Details</a
+                >
+            </div>
+            <!-- Button -->
+            <a
+                    class="hidden mr-3 p-3 px-7 py-2 text-center text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight md:block font-bold"
+                    href="#"
             >Sign Out</a
-          >
+            >
 
-          <!-- Hamburger Icon -->
-          <button
-            id="menu-btn"
-            class="block hamburger md:hidden focus:outline-none"
-          >
-            <span class="hamburger-top"></span>
-            <span class="hamburger-middle"></span>
-            <span class="hamburger-bottom"></span>
-          </button>
+            <!-- Hamburger Icon -->
+            <button
+                    class="block hamburger md:hidden focus:outline-none"
+                    id="menu-btn"
+            >
+                <span class="hamburger-top"></span>
+                <span class="hamburger-middle"></span>
+                <span class="hamburger-bottom"></span>
+            </button>
         </div>
 
         <!-- Mobile Menu -->
         <div class="md:hidden">
-          <div
-            id="menu"
-            class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white text-sm md:-auto md:self-auto left-6 right-6 drop-shadow-md z-50"
-          >
-            <a href="#">Home</a>
-            <a href="#">Customer</a>
-            <a href="#">Items</a>
-            <a href="#">Place Order</a>
-            <a href="#">Order Details</a>
-            <a
-              href="#"
-              class="mr-3 p-3 px-7 py-2 text-center text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight font-bold"
-              >Sign Out</a
+            <div
+                    class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white text-sm md:-auto md:self-auto left-6 right-6 drop-shadow-md z-50"
+                    id="menu"
             >
-          </div>
+                <a href="#">Home</a>
+                <a href="#">Customer</a>
+                <a href="#">Items</a>
+                <a href="#">Place Order</a>
+                <a href="#">Order Details</a>
+                <a
+                        class="mr-3 p-3 px-7 py-2 text-center text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight font-bold"
+                        href="#"
+                >Sign Out</a
+                >
+            </div>
         </div>
-      </nav>
-    </header>
+    </nav>
+</header>
 
-    <main>
-      <!-- Customer Section -->
-      <section id="customer flex">
+<main>
+    <!-- Customer Section -->
+    <section id="customer">
         <!-- Flex Container -->
         <div
-          class="h-full w-full container flex flex-col-reverse items-center px-6 mx-auto mt-5 space-y-0 md:space-y-0 md:flex-row"
+                class="h-full w-full container flex flex-col-reverse items-center px-6 mx-auto mt-5 space-y-0 md:space-y-0 md:flex-row"
         >
-          <!-- Header -->
-          <div
-            class="relative inline-block mt-3 lg:mt-3 md:mt-3 lg:text-2xl sm:text-xl font-Ubuntu"
-          >
-            <h2><i class="bi bi-people"></i> Customer</h2>
-          </div>
+            <!-- Header -->
+            <div
+                    class="relative inline-block mt-3 lg:mt-3 md:mt-3 lg:text-2xl sm:text-xl font-Ubuntu"
+            >
+                <h2><i class="bi bi-people"></i> Customer</h2>
+            </div>
         </div>
         <!-- Container -->
         <div
-          class="bg-brightWhite sectionBorder h-full w-full container flex flex-col px-2 mx-auto mt-1 space-y-0 md:space-y-0 rounded-xl"
+                class="bg-brightWhite sectionBorder h-full w-full container flex flex-col px-2 mx-auto mt-1 space-y-0 md:space-y-0 rounded-xl"
         >
-          <!-- Header -->
-          <div
-            class="relative inline-block mt-3 lg:mt-5 md:mt-4 lg:text-xl sm:text-lg font-Ubuntu"
-          >
-            <h6 id="H6" class="m-1">Home > Customer</h6>
-            <hr />
-          </div>
-
-          <!-- Customer Details Section-->
-          <div class="row-span-1 flex justify-around h-full w-full flex-wrap">
-            <!-- Customer Details Search Section -->
+            <!-- Header -->
             <div
-              class="columns-1 m-2 md:columns-md sm:columns-sm bg-slate-50 p-0 lg:text-lg sm:text-sm mt-10 rounded sectionBorder h-full font-Roboto"
+                    class="relative inline-block mt-3 lg:mt-5 md:mt-4 lg:text-xl sm:text-lg font-Ubuntu"
             >
-              <h4
-                class="text-center p-2 text-white rounded font-Pooppins bg-brightRedLight"
-              >
-                Manage Customer
-              </h4>
-              <div class="m-4">
-                <label
-                  class="block text-gray-700 font-bold mb-2"
-                  for="searchCusId"
-                >
-                  Search Customer :
-                </label>
-                <input
-                  class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                  id="searchCusId"
-                  placeholder="Input Name/NIC/Tp Here"
-                  type="search"
-                />
-              </div>
-              <div class="m-4 text-base">
-                <button
-                  class="focus:outline-none text-white bg-green-500 hover:bg-green-800 hover:text-black focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-                  id="btnSaveCustomer"
-                  type="button"
-                >
-                  + New Customer
-                </button>
-
-                <button
-                  class="focus:outline-none text-white bg-yellow-300 hover:bg-yellow-500 hover:text-black focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900"
-                  id="btnUpdateCustomer"
-                  type="button"
-                >
-                  Update Customer
-                </button>
-
-                <button
-                  class="focus:outline-none text-white bg-red-500 hover:bg-red-800 hover:text-black focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-                  id="btnDeleteCustomer"
-                  type="button"
-                >
-                  Delete Customer
-                </button>
-              </div>
+                <h6 class="m-1" id="H6">Home > Customer</h6>
+                <hr/>
             </div>
 
-            <!-- Customer Details CRUD Section -->
-            <div
-              class="columns-1 md:columns-md sm:columns-sm bg-slate-50 p-0 m-4 rounded sectionBorder h-full font-Ubuntu font-semibold lg:text-base sm:text-sm"
-            >
-              <form
-                class="space-y-3 p-1 m-3"
-                action="customer"
-                id="customerForm"
-              >
-                <div>
-                  <label
-                    for="txtCusId"
-                    class="block mb-1.5 text-gray-900 dark:text-black"
-                    >Customer ID :</label
-                  >
-                  <input
-                    type="text"
-                    name="id"
-                    id="txtCusId"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                    placeholder="C00-001"
-                    required
-                  />
-                  <span class="control-error"></span>
-                </div>
-
-                <div>
-                  <label
-                    for="txtCusName"
-                    class="block mb-1.5 text-gray-900 dark:text-black"
-                    >Customer Name :</label
-                  >
-                  <input
-                    type="text"
-                    name="name"
-                    id="txtCusName"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                    placeholder="Nimesh"
-                    required
-                  />
-                  <span class="control-error"></span>
-                </div>
-
-                <div>
-                  <label
-                    for="txtCusAddress"
-                    class="block mb-1.5 text-gray-900 dark:text-black"
-                    >Customer Address :</label
-                  >
-                  <input
-                    type="text"
-                    name="address"
-                    id="txtCusAddress"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                    placeholder="Galle"
-                    required
-                  />
-                  <span class="control-error"></span>
-                </div>
-
-                <div>
-                  <label
-                    for="txtCustomerSalary"
-                    class="block mb-1.5 text-gray-900 dark:text-black"
-                    >Customer Salary :</label
-                  >
-                  <input
-                    type="text"
-                    name="salary"
-                    id="txtCustomerSalary"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                    placeholder="80000"
-                    required
-                  />
-                  <span class="control-error"></span>
-                </div>
-              </form>
-            </div>
-          </div>
-          <!-- View Customer Details Table Start -->
-          <div
-            class="relative overflow-x-auto m-12 p-2 lg:text-base sm:text-md font-Ubuntu"
-          >
-            <table class="w-full text-left text-white dark:text-black">
-              <thead
-                class="text-white uppercase bg-brightRedLight dark:brightRedLight dark:text-black"
-              >
-                <tr>
-                  <th scope="col" class="px-6 py-3">Customer ID</th>
-                  <th scope="col" class="px-6 py-3">Cutomer Name</th>
-                  <th scope="col" class="px-6 py-3">Address</th>
-                  <th scope="col" class="px-6 py-3">Salary</th>
-                </tr>
-              </thead>
-              <tbody
-                class="text-white uppercase bg-red-200 dark:brightRedLight dark:text-black"
-                id="customerTable"
-              ></tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <!-- Item Section -->
-<section id="customer flex">
-  <!-- Flex Container -->
-  <div
-  class="h-full w-full container flex flex-col-reverse items-center px-6 mx-auto mt-5 space-y-0 md:space-y-0 md:flex-row"
->
-<!-- Header -->
-<div
-class="relative inline-block mt-3 lg:mt-3 md:mt-3 lg:text-2xl sm:text-xl font-Ubuntu"
->
-<h2><i class="bi bi-people"></i> Item</h2>
-</div>
-</div>
-<!-- Container -->
-<div
-        class="bg-brightWhite sectionBorder h-full w-full container flex flex-col px-2 mx-auto mt-1 space-y-0 md:space-y-0 rounded-xl"
->
- <!-- Header -->
- <div
- class="relative inline-block mt-3 lg:mt-5 md:mt-4 lg:text-xl sm:text-lg font-Ubuntu"
->
-<h6 class="m-1" id="H6">Home > Item</h6>
-<hr/>
-</div>
-<!-- Item Details Section-->
-<div class="row-span-1 flex justify-around h-full w-full flex-wrap">
- <!-- Item Details Search Section -->
- <div
- class="columns-1 m-2 md:columns-md sm:columns-sm bg-slate-50 p-0 lg:text-lg sm:text-sm mt-10 rounded sectionBorder h-full font-Roboto"
->
-<h4
-     class="text-center p-2 text-white rounded font-Pooppins bg-brightRedLight"
->
- Manage Item
-</h4>
-<div class="m-4">
-  <label
-          class="block text-gray-700 font-bold mb-2"
-          for="ItemIdSearch"
-  >
-      Search Customer :
-  </label>
-  <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          id="ItemIdSearch"
-          placeholder="Input Name/Code/Tp Here"
-          type="search"
-  />
-</div>
-<div class="m-4 text-base">
-  <button
-          class="focus:outline-none text-white bg-green-500 hover:bg-green-800 hover:text-black focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
-          id="btnAddItem"
-          type="button"
-  >
-      + New Item
-  </button>
-
-  <button
-  class="focus:outline-none text-white bg-yellow-300 hover:bg-yellow-500 hover:text-black focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900"
-  id="btnUpdateItem"
-  type="button"
->
-Update Item
-</button>
-
-<button class="focus:outline-none text-white bg-red-500 hover:bg-red-800 hover:text-black focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
-                            id="btnDeleteItem"
-                            type="button"
+            <!-- Customer Details Section-->
+            <div class="row-span-1 flex justify-around h-full w-full flex-wrap">
+                <!-- Customer Details Search Section -->
+                <div
+                        class="columns-1 m-2 md:columns-md sm:columns-sm bg-slate-50 p-0 lg:text-lg sm:text-sm mt-10 rounded sectionBorder h-full font-Roboto"
+                >
+                    <h4
+                            class="text-center p-2 text-white rounded font-Pooppins bg-brightRedLight"
                     >
-                        Delete Item
-                    </button>
-                  </div>
-                </div>  
-                
-              <!-- Item Details CRUD Section -->
+                        Manage Customer
+                    </h4>
+                    <div class="m-4">
+                        <label
+                                class="block text-gray-700 font-bold mb-2"
+                                for="searchCusId"
+                        >
+                            Search Customer :
+                        </label>
+                        <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="searchCusId"
+                                placeholder="Input Name/NIC/Tp Here"
+                                type="search"
+                        />
+                    </div>
+                    <div class="m-4 text-base">
+                        <button
+                                class="focus:outline-none text-white bg-green-500 hover:bg-green-800 hover:text-black focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                                id="btnSaveCustomer"
+                                type="button"
+                        >
+                            + New Customer
+                        </button>
+
+                        <button
+                                class="focus:outline-none text-white bg-yellow-300 hover:bg-yellow-500 hover:text-black focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900"
+                                id="btnUpdateCustomer"
+                                type="button"
+                        >
+                            Update Customer
+                        </button>
+
+                        <button
+                                class="focus:outline-none text-white bg-red-500 hover:bg-red-800 hover:text-black focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                                id="btnDeleteCustomer"
+                                type="button"
+                        >
+                            Delete Customer
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Customer Details CRUD Section -->
+                <div
+                        class="columns-1 md:columns-md sm:columns-sm bg-slate-50 p-0 m-4 rounded sectionBorder h-full font-Ubuntu font-semibold lg:text-base sm:text-sm"
+                >
+                    <form
+                            action="customer"
+                            class="space-y-3 p-1 m-3"
+                            id="customerForm"
+                    >
+                        <div>
+                            <label
+                                    class="block mb-1.5 text-gray-900 dark:text-black"
+                                    for="txtCusId"
+                            >Customer ID :</label
+                            >
+                            <input
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    id="txtCusId"
+                                    name="id"
+                                    placeholder="C00-001"
+                                    required
+                                    type="text"
+                            />
+                            <span class="control-error"></span>
+                        </div>
+
+                        <div>
+                            <label
+                                    class="block mb-1.5 text-gray-900 dark:text-black"
+                                    for="txtCusName"
+                            >Customer Name :</label
+                            >
+                            <input
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    id="txtCusName"
+                                    name="name"
+                                    placeholder="Nimesh"
+                                    required
+                                    type="text"
+                            />
+                            <span class="control-error"></span>
+                        </div>
+
+                        <div>
+                            <label
+                                    class="block mb-1.5 text-gray-900 dark:text-black"
+                                    for="txtCusAddress"
+                            >Customer Address :</label
+                            >
+                            <input
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    id="txtCusAddress"
+                                    name="address"
+                                    placeholder="Galle"
+                                    required
+                                    type="text"
+                            />
+                            <span class="control-error"></span>
+                        </div>
+
+                        <div>
+                            <label
+                                    class="block mb-1.5 text-gray-900 dark:text-black"
+                                    for="txtCustomerSalary"
+                            >Customer Salary :</label
+                            >
+                            <input
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    id="txtCustomerSalary"
+                                    name="salary"
+                                    placeholder="80000"
+                                    required
+                                    type="text"
+                            />
+                            <span class="control-error"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- View Customer Details Table Start -->
             <div
-            class="columns-1 md:columns-md sm:columns-sm bg-slate-50 p-0 m-4 rounded sectionBorder h-full font-Ubuntu font-semibold lg:text-base sm:text-sm"
-    >
-        <form
-                action="item"
-                class="space-y-3 p-1 m-3"
-                id="itemForm"
+                    class="relative overflow-x-auto m-12 p-2 lg:text-base sm:text-md font-Ubuntu"
+            >
+                <table class="w-full text-left text-white dark:text-black">
+                    <thead
+                            class="text-white uppercase bg-brightRedLight dark:brightRedLight dark:text-black"
+                    >
+                    <tr>
+                        <th class="px-6 py-3" scope="col">Customer ID</th>
+                        <th class="px-6 py-3" scope="col">Cutomer Name</th>
+                        <th class="px-6 py-3" scope="col">Address</th>
+                        <th class="px-6 py-3" scope="col">Salary</th>
+                    </tr>
+                    </thead>
+                    <tbody
+                            class="text-white uppercase bg-red-200 dark:brightRedLight dark:text-black"
+                            id="customerTable"
+                    ></tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Item Section -->
+    <section id="Item ">
+        <!-- Flex Container -->
+        <div
+                class="h-full w-full container flex flex-col-reverse items-center px-6 mx-auto mt-5 space-y-0 md:space-y-0 md:flex-row"
         >
-            <div>
-                <label
-                        class="block mb-1.5 text-gray-900 dark:text-black"
-                        for="txtItemID"
-                >Item Code :</label
-                >
-                <input
-                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        id="txtItemID"
-                        name="code"
-                        placeholder="I00-001"
-                        required
-                        type="text"
-                />
-                <span class="control-error"></span>
+            <!-- Header -->
+            <div
+                    class="relative inline-block mt-3 lg:mt-3 md:mt-3 lg:text-2xl sm:text-xl font-Ubuntu"
+            >
+                <h2><i class="bi bi-people"></i> Item</h2>
             </div>
-
-            <div>
-                <label
-                        class="block mb-1.5 text-gray-900 dark:text-black"
-                        for="txtItemName"
-                >Item Name :</label
-                >
-                <input
-                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        id="txtItemName"
-                        name="description"
-                        placeholder="Car"
-                        required
-                        type="text"
-                />
-                <span class="control-error"></span>
+        </div>
+        <!-- Container -->
+        <div
+                class="bg-brightWhite sectionBorder h-full w-full container flex flex-col px-2 mx-auto mt-1 space-y-0 md:space-y-0 rounded-xl"
+        >
+            <!-- Header -->
+            <div
+                    class="relative inline-block mt-3 lg:mt-5 md:mt-4 lg:text-xl sm:text-lg font-Ubuntu"
+            >
+                <h6 class="m-1">Home > Item</h6>
+                <hr/>
             </div>
-
-            <div>
-                <label
-                        class="block mb-1.5 text-gray-900 dark:text-black"
-                        for="txtItemQty"
-                >Item Qty :</label
+            <!-- Item Details Section-->
+            <div class="row-span-1 flex justify-around h-full w-full flex-wrap">
+                <!-- Item Details Search Section -->
+                <div
+                        class="columns-1 m-2 md:columns-md sm:columns-sm bg-slate-50 p-0 lg:text-lg sm:text-sm mt-10 rounded sectionBorder h-full font-Roboto"
                 >
-                <input
-                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        id="txtItemQty"
-                        name="qty"
-                        placeholder="4"
-                        required
-                        type="text"
-                />
-                <span class="control-error"></span>
-            </div>
+                    <h4
+                            class="text-center p-2 text-white rounded font-Pooppins bg-brightRedLight"
+                    >
+                        Manage Item
+                    </h4>
+                    <div class="m-4">
+                        <label
+                                class="block text-gray-700 font-bold mb-2"
+                                for="ItemIdSearch"
+                        >
+                            Search Customer :
+                        </label>
+                        <input
+                                class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                id="ItemIdSearch"
+                                placeholder="Input Name/Code/Tp Here"
+                                type="search"
+                        />
+                    </div>
+                    <div class="m-4 text-base">
+                        <button
+                                class="focus:outline-none text-white bg-green-500 hover:bg-green-800 hover:text-black focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+                                id="btnAddItem"
+                                type="button"
+                        >
+                            + New Item
+                        </button>
 
-            <div>
-                <label
-                        class="block mb-1.5 text-gray-900 dark:text-black"
-                        for="txtItemPrice"
-                >Item Price :</label
+                        <button
+                                class="focus:outline-none text-white bg-yellow-300 hover:bg-yellow-500 hover:text-black focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:focus:ring-yellow-900"
+                                id="btnUpdateItem"
+                                type="button"
+                        >
+                            Update Item
+                        </button>
+
+                        <button class="focus:outline-none text-white bg-red-500 hover:bg-red-800 hover:text-black focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-md px-5 py-2.5 mr-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                                id="btnDeleteItem"
+                                type="button"
+                        >
+                            Delete Item
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Item Details CRUD Section -->
+                <div
+                        class="columns-1 md:columns-md sm:columns-sm bg-slate-50 p-0 m-4 rounded sectionBorder h-full font-Ubuntu font-semibold lg:text-base sm:text-sm"
                 >
-                <input
-                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-                        id="txtItemPrice"
-                        name="unitPrice"
-                        placeholder="800"
-                        required
-                        type="text"
-                />
-                <span class="control-error"></span>
+                    <form
+                            action="item"
+                            class="space-y-3 p-1 m-3"
+                            id="itemForm"
+                    >
+                        <div>
+                            <label
+                                    class="block mb-1.5 text-gray-900 dark:text-black"
+                                    for="txtItemID"
+                            >Item Code :</label
+                            >
+                            <input
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    id="txtItemID"
+                                    name="code"
+                                    placeholder="I00-001"
+                                    required
+                                    type="text"
+                            />
+                            <span class="control-error"></span>
+                        </div>
+
+                        <div>
+                            <label
+                                    class="block mb-1.5 text-gray-900 dark:text-black"
+                                    for="txtItemName"
+                            >Item Name :</label
+                            >
+                            <input
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    id="txtItemName"
+                                    name="description"
+                                    placeholder="Car"
+                                    required
+                                    type="text"
+                            />
+                            <span class="control-error"></span>
+                        </div>
+
+                        <div>
+                            <label
+                                    class="block mb-1.5 text-gray-900 dark:text-black"
+                                    for="txtItemQty"
+                            >Item Qty :</label
+                            >
+                            <input
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    id="txtItemQty"
+                                    name="qty"
+                                    placeholder="4"
+                                    required
+                                    type="text"
+                            />
+                            <span class="control-error"></span>
+                        </div>
+
+                        <div>
+                            <label
+                                    class="block mb-1.5 text-gray-900 dark:text-black"
+                                    for="txtItemPrice"
+                            >Item Price :</label
+                            >
+                            <input
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                    id="txtItemPrice"
+                                    name="unitPrice"
+                                    placeholder="800"
+                                    required
+                                    type="text"
+                            />
+                            <span class="control-error"></span>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </form>
-    </div>
-</div> 
+            <!-- View Item Details Table Start -->
+            <div class="relative overflow-x-auto m-12 p-2 lg:text-base sm:text-md font-Ubuntu">
+                <table class="w-full text-left text-white dark:text-black">
+                    <thead class="text-white uppercase bg-brightRedLight dark:brightRedLight dark:text-black">
+                    <tr>
+                        <th class="px-6 py-3" scope="col">
+                            Item Code
+                        </th>
+                        <th class="px-6 py-3" scope="col">
+                            Item Name
+                        </th>
+                        <th class="px-6 py-3" scope="col">
+                            Quantity
+                        </th>
+                        <th class="px-6 py-3" scope="col">
+                            Price
+                        </th>
+                    </tr>
+                    </thead>
+                    <tbody class="text-white uppercase bg-red-200 dark:brightRedLight dark:text-black"
+                           id="ItemTable">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+    </section>
 
-
-    </main>
-    <!--import jQuery library-->
-    <script
-      rel="script"
-      src="../assets/styles/jQuery/jquery-3.6.1.min.js"
-    ></script>
-    <script
-      rel="script"
-      src="../assets/styles/sweetalert2-11.6.16/sweetalert2.min.js"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+</main>
+<!--import jQuery library-->
+<script
+        rel="script"
+        src="../assets/styles/jQuery/jquery-3.6.1.min.js"
+></script>
+<script
+        rel="script"
+        src="../assets/styles/sweetalert2-11.6.16/sweetalert2.min.js"
+></script>
+<script src="script.js"></script>
+</body>
 </html>
