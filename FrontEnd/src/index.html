@@ -352,7 +352,89 @@ Update Item
                         Delete Item
                     </button>
                   </div>
-                </div>         
+                </div>  
+                
+              <!-- Item Details CRUD Section -->
+            <div
+            class="columns-1 md:columns-md sm:columns-sm bg-slate-50 p-0 m-4 rounded sectionBorder h-full font-Ubuntu font-semibold lg:text-base sm:text-sm"
+    >
+        <form
+                action="item"
+                class="space-y-3 p-1 m-3"
+                id="itemForm"
+        >
+            <div>
+                <label
+                        class="block mb-1.5 text-gray-900 dark:text-black"
+                        for="txtItemID"
+                >Item Code :</label
+                >
+                <input
+                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        id="txtItemID"
+                        name="code"
+                        placeholder="I00-001"
+                        required
+                        type="text"
+                />
+                <span class="control-error"></span>
+            </div>
+
+            <div>
+                <label
+                        class="block mb-1.5 text-gray-900 dark:text-black"
+                        for="txtItemName"
+                >Item Name :</label
+                >
+                <input
+                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        id="txtItemName"
+                        name="description"
+                        placeholder="Car"
+                        required
+                        type="text"
+                />
+                <span class="control-error"></span>
+            </div>
+
+            <div>
+                <label
+                        class="block mb-1.5 text-gray-900 dark:text-black"
+                        for="txtItemQty"
+                >Item Qty :</label
+                >
+                <input
+                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        id="txtItemQty"
+                        name="qty"
+                        placeholder="4"
+                        required
+                        type="text"
+                />
+                <span class="control-error"></span>
+            </div>
+
+            <div>
+                <label
+                        class="block mb-1.5 text-gray-900 dark:text-black"
+                        for="txtItemPrice"
+                >Item Price :</label
+                >
+                <input
+                        class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                        id="txtItemPrice"
+                        name="unitPrice"
+                        placeholder="800"
+                        required
+                        type="text"
+                />
+                <span class="control-error"></span>
+            </div>
+        </form>
+    </div>
+</div> 
+
+
     </main>
     <!--import jQuery library-->
     <script
