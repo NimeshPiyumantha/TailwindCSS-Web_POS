@@ -1,10 +1,11 @@
 package lk.pos.controller;
 
+import lk.pos.dto.CustomerDTO;
 import lk.pos.service.CustomerService;
+import lk.pos.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @author : Nimesh Piyumantha
@@ -17,4 +18,11 @@ public class CustomerController {
 
     @Autowired
     private CustomerService service;
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping
+    public ResponseUtil saveCustomer(@ModelAttribute CustomerDTO dto) {
+        service.saveCustomer(dto);
+        return new ResponseUtil("OK", "Successfully Registered.!", null);
+    }
 }
