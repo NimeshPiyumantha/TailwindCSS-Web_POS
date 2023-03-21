@@ -33,4 +33,10 @@ public class CustomerController {
         return new ResponseUtil("OK", "Successfully Updated. :" + dto.getId(), null);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @DeleteMapping
+    public ResponseUtil deleteCustomer(@RequestBody CustomerDTO dto) {
+        service.deleteCustomer(dto);
+        return new ResponseUtil("OK", "Successfully Deleted. :" + dto.getId(), null);
+    }
 }
