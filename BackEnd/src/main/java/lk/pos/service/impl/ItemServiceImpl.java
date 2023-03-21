@@ -1,6 +1,6 @@
-package lk.pos.controller.impl;
+package lk.pos.service.impl;
 
-import lk.pos.controller.CustomerService;
+import lk.pos.service.ItemService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -10,5 +10,5 @@ import org.springframework.transaction.annotation.Transactional;
  **/
 @Service
 @Transactional
-public class CustomerServiceImpl implements CustomerService {
+public class ItemServiceImpl implements ItemService {
 }
