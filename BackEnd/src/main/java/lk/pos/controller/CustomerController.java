@@ -25,4 +25,11 @@ public class CustomerController {
         service.saveCustomer(dto);
         return new ResponseUtil("OK", "Successfully Registered.!", null);
     }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @PutMapping
+    public ResponseUtil updateCustomer(@RequestBody CustomerDTO dto) {
+        service.updateCustomer(dto);
+        return new ResponseUtil("OK", "Successfully Updated. :" + dto.getId(), null);
+    }
 }
