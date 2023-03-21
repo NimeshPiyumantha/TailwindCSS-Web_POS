@@ -2,6 +2,7 @@ package lk.pos.service;
 
 import lk.pos.dto.CustomerDTO;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 
 /**
  * @author : Nimesh Piyumantha
@@ -9,5 +10,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
  **/
 public interface CustomerService {
     void saveCustomer(@ModelAttribute CustomerDTO dto);
+    void updateCustomer(@RequestBody CustomerDTO dto);
 
 }
