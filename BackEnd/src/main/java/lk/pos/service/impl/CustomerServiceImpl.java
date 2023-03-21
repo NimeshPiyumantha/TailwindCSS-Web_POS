@@ -1,5 +1,7 @@
 package lk.pos.service.impl;
 
+import lk.pos.dto.CustomerDTO;
+import lk.pos.entity.Customer;
 import lk.pos.repo.CustomerRepo;
 import lk.pos.service.CustomerService;
 import org.modelmapper.ModelMapper;
@@ -19,4 +21,7 @@ public class CustomerServiceImpl implements CustomerService {
     private CustomerRepo repo;
     @Autowired
     private ModelMapper mapper;
+
+
+
 }
