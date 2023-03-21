@@ -12,5 +12,6 @@ public interface CustomerService {
     void saveCustomer(@ModelAttribute CustomerDTO dto);
     void updateCustomer(@RequestBody CustomerDTO dto);
     void deleteCustomer(@RequestBody CustomerDTO dto);
+    CustomerDTO searchCusId(String id);
 
 }
