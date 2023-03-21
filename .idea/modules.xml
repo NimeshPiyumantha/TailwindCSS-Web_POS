@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../TailwindCSS-Web_POS.iml" filepath="$PROJECT_DIR$/../TailwindCSS-Web_POS.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FrontEnd/FrontEnd.iml" filepath="$PROJECT_DIR$/FrontEnd/FrontEnd.iml" />
     </modules>
   </component>
 </project>
