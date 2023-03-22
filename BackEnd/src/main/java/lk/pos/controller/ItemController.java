@@ -1,5 +1,6 @@
 package lk.pos.controller;
 
+import lk.pos.dto.CustomDTO;
 import lk.pos.dto.ItemDTO;
 import lk.pos.service.ItemService;
 import lk.pos.util.ResponseUtil;
@@ -51,5 +52,12 @@ public class ItemController {
     public ResponseUtil loadAllItem() {
         return new ResponseUtil("OK", "Successfully Loaded. :", service.loadAllItem());
     }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/ItemIdGenerate")
+    public @ResponseBody CustomDTO ItemIdGenerate() {
+        return service.itemIdGenerate();
+    }
+
 
 }
