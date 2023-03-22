@@ -46,5 +46,10 @@ public class ItemController {
         return service.searchItemCode(code);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/loadAllItem")
+    public ResponseUtil loadAllItem() {
+        return new ResponseUtil("OK", "Successfully Loaded. :", service.loadAllItem());
+    }
 
 }
