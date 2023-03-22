@@ -1,5 +1,6 @@
 package lk.pos.controller;
 
+import lk.pos.dto.CustomDTO;
 import lk.pos.dto.CustomerDTO;
 import lk.pos.service.CustomerService;
 import lk.pos.util.ResponseUtil;
@@ -51,4 +52,11 @@ public class CustomerController {
     public ResponseUtil loadAllCustomer() {
         return new ResponseUtil("OK", "Successfully Loaded. :", service.loadAllCustomer());
     }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/CustomerIdGenerate")
+    public @ResponseBody CustomDTO customerIdGenerate() {
+        return service.customerIdGenerate();
+    }
+
 }
