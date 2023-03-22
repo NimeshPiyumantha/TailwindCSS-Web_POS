@@ -29,4 +29,12 @@ public class ItemServiceImpl implements ItemService {
         }
         repo.save(mapper.map(dto, Item.class));
     }
+
+    @Override
+    public void updateItem(ItemDTO dto) {
+        if (!repo.existsById(dto.getCode())) {
+            throw new RuntimeException("Item Not Exist. Please enter Valid id..!");
+        }
+        repo.save(mapper.map(dto, Item.class));
+    }
 }
