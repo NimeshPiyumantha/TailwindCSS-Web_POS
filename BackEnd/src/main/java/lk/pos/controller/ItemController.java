@@ -40,4 +40,11 @@ public class ItemController {
         return new ResponseUtil("OK", "Successfully Deleted. :" + dto.getCode(), null);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/searchItemCode", params = {"code"})
+    public ItemDTO searchItemCode(String code) {
+        return service.searchItemCode(code);
+    }
+
+
 }
