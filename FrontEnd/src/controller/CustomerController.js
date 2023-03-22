@@ -45,3 +45,15 @@ function generateCustomerID() {
 /**
  * Customer Save
  * */
+$("#btnSaveCustomer").click(function () {
+    let formData = $("#customerForm").serialize();
+    console.log(formData);
+    $.ajax({
+        url: baseUrlCustomer + "customer", method: "post", data: formData, dataType: "json", success: function (res) {
+            saveUpdateAlert("Customer", res.message);
+            loadAllCustomer();
+        }, error: function (error) {
+            unSuccessUpdateAlert("Customer", JSON.parse(error.responseText).message);
+        }
+    });
+});
