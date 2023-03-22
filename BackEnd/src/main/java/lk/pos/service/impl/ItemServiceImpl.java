@@ -37,4 +37,12 @@ public class ItemServiceImpl implements ItemService {
         }
         repo.save(mapper.map(dto, Item.class));
     }
+
+    @Override
+    public void deleteItem(ItemDTO dto) {
+        if (!repo.existsById(dto.getCode())) {
+            throw new RuntimeException("Wrong ID..Please enter valid id..!");
+        }
+        repo.delete(mapper.map(dto, Item.class));
+    }
 }
