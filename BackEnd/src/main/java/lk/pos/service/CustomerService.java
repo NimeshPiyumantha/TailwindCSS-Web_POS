@@ -3,6 +3,7 @@ package lk.pos.service;
 import lk.pos.dto.CustomerDTO;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 
