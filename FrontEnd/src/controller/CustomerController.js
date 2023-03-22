@@ -5,3 +5,5 @@
  * @date : 3/22/2023
  * @time : 11:51 PM
  **/
+
+let baseUrlCustomer = "http://localhost:8080/BackEnd_war/";
