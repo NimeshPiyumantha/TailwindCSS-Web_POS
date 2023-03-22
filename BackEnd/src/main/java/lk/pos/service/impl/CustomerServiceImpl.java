@@ -46,4 +46,12 @@ public class CustomerServiceImpl implements CustomerService {
         repo.delete(mapper.map(dto, Customer.class));
     }
 
+    @Override
+    public CustomerDTO searchCusId(String id) {
+        if (!repo.existsById(id)) {
+            throw new RuntimeException("Wrong ID. Please enter Valid id..!");
+        }
+        return mapper.map(repo.findById(id).get(), CustomerDTO.class);
+    }
+
 }
