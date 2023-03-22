@@ -4,6 +4,8 @@ import lk.pos.dto.CustomerDTO;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 
+import java.util.ArrayList;
+
 /**
  * @author : Nimesh Piyumantha
  * @since : 0.1.0
@@ -13,5 +15,7 @@ public interface CustomerService {
     void updateCustomer(@RequestBody CustomerDTO dto);
     void deleteCustomer(@RequestBody CustomerDTO dto);
     CustomerDTO searchCusId(String id);
+    ArrayList<CustomerDTO> loadAllCustomer();
+
 
 }
