@@ -70,4 +70,8 @@ public class ItemServiceImpl implements ItemService {
         return new CustomDTO(repo.getLastIndex());
     }
 
+    @Override
+    public CustomDTO getSumItem() {
+        return new CustomDTO(repo.getSumItem());
+    }
 }
