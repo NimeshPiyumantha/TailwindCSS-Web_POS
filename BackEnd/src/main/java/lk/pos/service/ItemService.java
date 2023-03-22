@@ -1,8 +1,10 @@
 package lk.pos.service;
 
+import lk.pos.dto.CustomDTO;
 import lk.pos.dto.ItemDTO;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.ArrayList;
 
@@ -16,4 +18,6 @@ public interface ItemService {
     void deleteItem(@RequestBody ItemDTO dto);
     ItemDTO searchItemCode(String code);
     ArrayList<ItemDTO> loadAllItem();
+    @ResponseBody
+    CustomDTO itemIdGenerate();
 }
