@@ -39,4 +39,11 @@ public class CustomerController {
         service.deleteCustomer(dto);
         return new ResponseUtil("OK", "Successfully Deleted. :" + dto.getId(), null);
     }
+
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/searchCusId", params = {"id"})
+    public CustomerDTO searchCusId(String id) {
+        return service.searchCusId(id);
+    }
+
 }
