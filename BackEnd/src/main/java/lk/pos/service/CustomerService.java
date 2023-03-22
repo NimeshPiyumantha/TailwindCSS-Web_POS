@@ -20,5 +20,7 @@ public interface CustomerService {
     ArrayList<CustomerDTO> loadAllCustomer();
     @ResponseBody
     CustomDTO customerIdGenerate();
+    @ResponseBody
+    CustomDTO getSumCustomer();
 
 }
