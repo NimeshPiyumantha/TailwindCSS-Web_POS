@@ -10,3 +10,38 @@ let baseUrlCustomer = "http://localhost:8080/BackEnd_war/";
 $("#btnSaveCustomer").attr('disabled', true);
 $("#btnUpdateCustomer").attr('disabled', true);
 $("#btnDeleteCustomer").attr('disabled', true);
+
+/**
+ * Customer Save
+ * Customer ID
+ * */
+function generateCustomerID() {
+    $("#txtCusId").val("C00-001");
+    $.ajax({
+        url: baseUrlCustomer + "customer/CustomerIdGenerate",
+        method: "GET",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (resp) {
+            let id = resp.value;
+            console.log("id" +id);
+            let tempId = parseInt(id.split("-")[1]);
+            tempId = tempId + 1;
+            if (tempId <= 9) {
+                $("#txtCusId").val("C00-00" + tempId);
+            } else if (tempId <= 99) {
+                $("#txtCusId").val("C00-0" + tempId);
+            } else {
+                $("#txtCusId").val("C00-" + tempId);
+            }
+        },
+        error: function (ob, statusText, error) {
+
+        }
+    });
+}
+
+
+/**
+ * Customer Save
+ * */
