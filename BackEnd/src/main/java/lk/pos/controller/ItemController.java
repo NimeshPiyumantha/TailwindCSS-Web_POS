@@ -59,5 +59,10 @@ public class ItemController {
         return service.itemIdGenerate();
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/itemCount")
+    public @ResponseBody CustomDTO getSumItem() {
+        return service.getSumItem();
+    }
 
 }
