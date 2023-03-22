@@ -80,7 +80,7 @@ function setTextFieldValues(id, name, address, salary) {
 function loadAllCustomer() {
     $("#customerTable").empty();
     $.ajax({
-        url: baseUrl + "customer/loadAllCustomer",
+        url: baseUrlCustomer + "customer/loadAllCustomer",
         method: "GET", dataType: "json", success: function (res) {
             console.log(res);
 
@@ -132,7 +132,7 @@ $("#searchCusId").on("keypress", function (event) {
         var search = $("#searchCusId").val();
         $("#customerTable").empty();
         $.ajax({
-            url: baseUrl + "customer/searchCusId/?id="+ search,
+            url: baseUrlCustomer + "customer/searchCusId/?id="+ search,
             method: "GET",
             contentType: "application/json",
             dataType: "json",
@@ -152,3 +152,36 @@ $("#searchCusId").on("keypress", function (event) {
 
 });
 
+/**
+ * Customer Update
+ * */
+
+/**
+ * Update Action
+ * */
+$("#btnUpdateCustomer").click(function () {
+
+    let cusId = $("#txtCusId").val();
+    let cusName = $("#txtCusName").val();
+    let cusAddress = $("#txtCusAddress").val();
+    let cusSalary = $("#txtCustomerSalary").val();
+
+    const customerOb = {
+        id: cusId, name: cusName, address: cusAddress, salary: cusSalary
+    };
+
+    $.ajax({
+        url: baseUrlCustomer + "customer",
+        method: "put",
+        contentType: "application/json",
+        data: JSON.stringify(customerOb),
+        success: function (res) {
+            saveUpdateAlert("Customer", res.message);
+            loadAllCustomer();
+        },
+        error: function (error) {
+            let message = JSON.parse(error.responseText).message;
+            unSuccessUpdateAlert("Customer", message);
+        }
+    });
+});
