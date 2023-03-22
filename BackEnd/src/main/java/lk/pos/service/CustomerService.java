@@ -1,5 +1,6 @@
 package lk.pos.service;
 
+import lk.pos.dto.CustomDTO;
 import lk.pos.dto.CustomerDTO;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,6 +18,7 @@ public interface CustomerService {
     void deleteCustomer(@RequestBody CustomerDTO dto);
     CustomerDTO searchCusId(String id);
     ArrayList<CustomerDTO> loadAllCustomer();
-
+    @ResponseBody
+    CustomDTO customerIdGenerate();
 
 }
