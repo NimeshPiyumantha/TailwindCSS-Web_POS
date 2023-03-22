@@ -1,5 +1,6 @@
 package lk.pos.service.impl;
 
+import lk.pos.dto.CustomDTO;
 import lk.pos.dto.CustomerDTO;
 import lk.pos.entity.Customer;
 import lk.pos.repo.CustomerRepo;
@@ -62,5 +63,11 @@ public class CustomerServiceImpl implements CustomerService {
         return mapper.map(repo.findAll(), new TypeToken<ArrayList<Customer>>() {
         }.getType());
     }
+
+    @Override
+    public CustomDTO customerIdGenerate() {
+        return new CustomDTO(repo.getLastIndex());
+    }
+
 
 }
