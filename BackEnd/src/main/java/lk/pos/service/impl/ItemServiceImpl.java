@@ -1,5 +1,6 @@
 package lk.pos.service.impl;
 
+import lk.pos.dto.CustomDTO;
 import lk.pos.dto.ItemDTO;
 import lk.pos.entity.Item;
 import lk.pos.repo.ItemRepo;
@@ -63,4 +64,10 @@ public class ItemServiceImpl implements ItemService {
         return mapper.map(repo.findAll(), new TypeToken<ArrayList<Item>>() {
         }.getType());
     }
+
+    @Override
+    public CustomDTO itemIdGenerate() {
+        return new CustomDTO(repo.getLastIndex());
+    }
+
 }
