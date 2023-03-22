@@ -7,3 +7,6 @@
  **/
 
 let baseUrlCustomer = "http://localhost:8080/BackEnd_war/";
+$("#btnSaveCustomer").attr('disabled', true);
+$("#btnUpdateCustomer").attr('disabled', true);
+$("#btnDeleteCustomer").attr('disabled', true);
