@@ -26,4 +26,11 @@ public class ItemController {
         return new ResponseUtil("OK", "Successfully Registered.!", null);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @PutMapping
+    public ResponseUtil updateItem(@RequestBody ItemDTO dto) {
+        service.updateItem(dto);
+        return new ResponseUtil("OK", "Successfully Updated. :" + dto.getCode(), null);
+    }
+
 }
