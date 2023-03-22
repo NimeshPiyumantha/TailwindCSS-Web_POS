@@ -104,3 +104,22 @@ function loadAllCustomer() {
 
     });
 }
+
+/**
+ * Table Listener Click and Load textFields
+ * */
+function blindClickEvents() {
+    $("#customerTable>tr").on("click", function () {
+        let id = $(this).children().eq(0).text();
+        let name = $(this).children().eq(1).text();
+        let address = $(this).children().eq(2).text();
+        let salary = $(this).children().eq(3).text();
+        console.log(id, name, address, salary);
+
+        $("#txtCusId").val(id);
+        $("#txtCusName").val(name);
+        $("#txtCusAddress").val(address);
+        $("#txtCustomerSalary").val(salary);
+    });
+    $("#btnSaveCustomer").attr('disabled', true);
+}
