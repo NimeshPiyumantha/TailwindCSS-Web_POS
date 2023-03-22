@@ -5,9 +5,12 @@ import lk.pos.entity.Item;
 import lk.pos.repo.ItemRepo;
 import lk.pos.service.ItemService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
 
 /**
  * @author : Nimesh Piyumantha
@@ -53,5 +56,11 @@ public class ItemServiceImpl implements ItemService {
         }
         Item item = repo.findById(code).get();
         return mapper.map(item, ItemDTO.class);
+    }
+
+    @Override
+    public ArrayList<ItemDTO> loadAllItem() {
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<Item>>() {
+        }.getType());
     }
 }
