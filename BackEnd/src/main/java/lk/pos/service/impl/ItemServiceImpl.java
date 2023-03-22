@@ -17,5 +17,6 @@ public class ItemServiceImpl implements ItemService {
     @Autowired
     private ItemRepo repo;
 
-
+    @Autowired
+    private ModelMapper mapper;
 }
