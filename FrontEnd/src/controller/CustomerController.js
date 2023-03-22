@@ -185,3 +185,37 @@ $("#btnUpdateCustomer").click(function () {
         }
     });
 });
+
+/**
+ * Customer Delete
+ * */
+
+/**
+ * Delete Action
+ * */
+$("#btnDeleteCustomer").click(function () {
+
+    let cusId = $("#txtCusId").val();
+    let cusName = $("#txtCusName").val();
+    let cusAddress = $("#txtCusAddress").val();
+    let cusSalary = $("#txtCustomerSalary").val();
+
+    const customerOb = {
+        id: cusId, name: cusName, address: cusAddress, salary: cusSalary
+    };
+
+    $.ajax({
+        url: baseUrlCustomer + "customer",
+        method: "delete",
+        contentType: "application/json",
+        data: JSON.stringify(customerOb),
+        success: function (res) {
+            saveUpdateAlert("Customer", res.message);
+            loadAllCustomer();
+        },
+        error: function (error) {
+            let message = JSON.parse(error.responseText).message;
+            unSuccessUpdateAlert("Customer", message);
+        }
+    });
+});
