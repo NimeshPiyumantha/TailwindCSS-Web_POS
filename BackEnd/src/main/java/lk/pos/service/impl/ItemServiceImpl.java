@@ -1,5 +1,7 @@
 package lk.pos.service.impl;
 
+import lk.pos.dto.ItemDTO;
+import lk.pos.entity.Item;
 import lk.pos.repo.ItemRepo;
 import lk.pos.service.ItemService;
 import org.modelmapper.ModelMapper;
@@ -19,4 +21,12 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private ModelMapper mapper;
+
+    @Override
+    public void saveItem(ItemDTO dto) {
+        if (repo.existsById(dto.getCode())) {
+            throw new RuntimeException("Item Already Exist. Please enter another id..!");
+        }
+        repo.save(mapper.map(dto, Item.class));
+    }
 }
