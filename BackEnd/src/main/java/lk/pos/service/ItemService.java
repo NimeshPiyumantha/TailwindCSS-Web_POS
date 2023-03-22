@@ -12,4 +12,5 @@ public interface ItemService {
     void saveItem(@ModelAttribute ItemDTO dto);
     void updateItem(@RequestBody ItemDTO dto);
     void deleteItem(@RequestBody ItemDTO dto);
+    ItemDTO searchItemCode(String code);
 }
