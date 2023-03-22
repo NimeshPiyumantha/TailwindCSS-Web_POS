@@ -69,5 +69,9 @@ public class CustomerServiceImpl implements CustomerService {
         return new CustomDTO(repo.getLastIndex());
     }
 
+    @Override
+    public CustomDTO getSumCustomer() {
+        return new CustomDTO(repo.getSumCustomer());
+    }
 
 }
