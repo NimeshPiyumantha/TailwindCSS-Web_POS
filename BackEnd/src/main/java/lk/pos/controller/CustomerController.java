@@ -46,4 +46,9 @@ public class CustomerController {
         return service.searchCusId(id);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/loadAllCustomer")
+    public ResponseUtil loadAllCustomer() {
+        return new ResponseUtil("OK", "Successfully Loaded. :", service.loadAllCustomer());
+    }
 }
