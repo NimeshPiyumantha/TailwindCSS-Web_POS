@@ -58,3 +58,18 @@ $("#btnSaveCustomer").click(function () {
         }
     });
 });
+
+/**
+ * clear input fields Values Method
+ * */
+function setTextFieldValues(id, name, address, salary) {
+    $("#txtCusId").val(id);
+    $("#txtCusName").val(name);
+    $("#txtCusAddress").val(address);
+    $("#txtCustomerSalary").val(salary);
+    $("#txtCusName").focus();
+    checkValidity(customerValidations);
+    $("#btnSaveCustomer").attr('disabled', true);
+    $("#btnUpdateCustomer").attr('disabled', true);
+    $("#btnDeleteCustomer").attr('disabled', true);
+}
