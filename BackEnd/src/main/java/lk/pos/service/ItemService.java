@@ -20,4 +20,6 @@ public interface ItemService {
     ArrayList<ItemDTO> loadAllItem();
     @ResponseBody
     CustomDTO itemIdGenerate();
+    @ResponseBody
+    CustomDTO getSumItem();
 }
