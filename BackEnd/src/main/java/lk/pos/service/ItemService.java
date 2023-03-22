@@ -11,4 +11,5 @@ import org.springframework.web.bind.annotation.RequestBody;
 public interface ItemService {
     void saveItem(@ModelAttribute ItemDTO dto);
     void updateItem(@RequestBody ItemDTO dto);
+    void deleteItem(@RequestBody ItemDTO dto);
 }
