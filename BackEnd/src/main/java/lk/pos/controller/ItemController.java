@@ -33,4 +33,11 @@ public class ItemController {
         return new ResponseUtil("OK", "Successfully Updated. :" + dto.getCode(), null);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @DeleteMapping
+    public ResponseUtil deleteItem(@RequestBody ItemDTO dto) {
+        service.deleteItem(dto);
+        return new ResponseUtil("OK", "Successfully Deleted. :" + dto.getCode(), null);
+    }
+
 }
