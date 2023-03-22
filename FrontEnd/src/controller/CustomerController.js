@@ -123,3 +123,32 @@ function blindClickEvents() {
     });
     $("#btnSaveCustomer").attr('disabled', true);
 }
+
+/**
+ * Search id and Load Table
+ * */
+$("#searchCusId").on("keypress", function (event) {
+    if (event.which === 13) {
+        var search = $("#searchCusId").val();
+        $("#customerTable").empty();
+        $.ajax({
+            url: baseUrl + "customer/searchCusId/?id="+ search,
+            method: "GET",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (res) {
+                console.log(res);
+                let row = "<tr><td>" + res.id + "</td><td>" + res.name + "</td><td>" + res.address + "</td><td>" + res.salary + "</td></tr>";
+                $("#customerTable").append(row);
+                blindClickEvents();
+            },
+            error: function (error) {
+                loadAllCustomer();
+                let message = JSON.parse(error.responseText).message;
+                emptyMassage(message);
+            }
+        })
+    }
+
+});
+
