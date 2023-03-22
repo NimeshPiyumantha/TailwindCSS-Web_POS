@@ -5,9 +5,12 @@ import lk.pos.entity.Customer;
 import lk.pos.repo.CustomerRepo;
 import lk.pos.service.CustomerService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.ArrayList;
 
 /**
  * @author : Nimesh Piyumantha
@@ -52,6 +55,12 @@ public class CustomerServiceImpl implements CustomerService {
             throw new RuntimeException("Wrong ID. Please enter Valid id..!");
         }
         return mapper.map(repo.findById(id).get(), CustomerDTO.class);
+    }
+
+    @Override
+    public ArrayList<CustomerDTO> loadAllCustomer() {
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<Customer>>() {
+        }.getType());
     }
 
 }
