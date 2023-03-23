@@ -61,3 +61,20 @@ $("#btnAddItem").click(function () {
         }
     });
 });
+
+/**
+ * clear input fields Values Method
+ * */
+function setTextFieldValues(code, description, qty, price) {
+    $("#txtItemID").val(code);
+    $("#txtItemName").val(description);
+    $("#txtItemQty").val(qty);
+    $("#txtItemPrice").val(price);
+    $("#txtItemName").focus();
+    checkValidity(ItemsValidations);
+    $("#btnAddItem").attr('disabled', true);
+    $("#btnUpdateItem").attr('disabled', true);
+    $("#btnDeleteItem").attr('disabled', true);
+
+}
+
