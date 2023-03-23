@@ -41,3 +41,23 @@ function generateItemID() {
         }
     });
 }
+
+/**
+ * Button Add New Item
+ * */
+$("#btnAddItem").click(function () {
+    let formData = $("#itemForm").serialize();
+    $.ajax({
+        url: baseUrlItem + "item",
+        method: "post",
+        data: formData,
+        dataType: "json",
+        success: function (res) {
+            saveUpdateAlert("item", res.message);
+            loadAllItems();
+        },
+        error: function (error) {
+            unSuccessUpdateAlert("item", JSON.parse(error.responseText).message);
+        }
+    });
+});
