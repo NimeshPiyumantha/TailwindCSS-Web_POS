@@ -24,5 +24,11 @@ $("#homeBtn,.homeBtn").click(function () {
 });
 
 
-
+$("#customerBtn,.customerBtn").click(function () {
+  $("#HomeSection").css('display', 'none');
+  $("#CustomerSection").css('display', 'block');
+  $("#ItemSection").css('display', 'none');
+  $("#OrderSection").css('display', 'none');
+  $("#OrderDetails").css('display', 'none');
+});
 
