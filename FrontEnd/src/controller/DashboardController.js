@@ -49,3 +49,18 @@ $("#itemBtn,.itemBtn").click(function () {
 });
 
 let baseUrlDashboard = "http://localhost:8080/BackEnd_war/";
+$("#txtCustomerCount").val("00");
+$.ajax({
+    url: baseUrl + "customer/CustomerCount",
+    method: "GET",
+    contentType: "application/json",
+    dataType: "json",
+    success: function (resp) {
+        let num = resp.count;
+        $("#txtCustomerCount").text(num);
+
+    },
+    error: function (ob, statusText, error) {
+
+    }
+});
