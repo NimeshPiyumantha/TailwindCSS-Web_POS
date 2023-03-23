@@ -194,3 +194,41 @@ $("#btnUpdateItem").click(function () {
     });
 });
 
+
+/**
+ * Item Delete
+ * */
+
+/**
+ * Delete Action
+ * */
+$("#btnDeleteItem").click(function () {
+
+    let itCode = $("#txtItemID").val();
+    let itDescription = $("#txtItemName").val();
+    let itQty = $("#txtItemQty").val();
+    let itUnitPrice = $("#txtItemPrice").val();
+
+    const itemOb = {
+        code: itCode,
+        description: itDescription,
+        qty: itQty,
+        unitPrice: itUnitPrice
+    }
+    $.ajax({
+        url: baseUrlItem + "item",
+        method: "delete",
+        contentType: "application/json",
+        data: JSON.stringify(itemOb),
+        success: function (res) {
+            saveUpdateAlert("Item", res.message);
+            loadAllItems();
+        },
+        error: function (error) {
+            let message = JSON.parse(error.responseText).message;
+            unSuccessUpdateAlert("Item", message);
+        }
+    });
+});
+
+
