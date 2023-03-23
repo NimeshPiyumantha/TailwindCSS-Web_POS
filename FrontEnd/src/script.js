@@ -6,3 +6,16 @@ btn.addEventListener('click', () => {
   nav.classList.toggle('flex');
   nav.classList.toggle('hidden');
 });
+
+$(document).ready(function () {
+  $("#HomeSection").css('display', 'block');
+  $("#CustomerSection").css('display', 'none');
+  $("#ItemSection").css('display', 'none');
+  $("#OrderSection").css('display', 'none');
+  $("#OrderDetails").css('display', 'none');
+});
+
+
+
+
+
