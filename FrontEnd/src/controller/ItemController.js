@@ -109,3 +109,23 @@ function loadAllItems() {
         }
     });
 }
+
+/**
+ * Table Listener Click and Load textFields
+ * */
+function blindClickEvents() {
+    $("#ItemTable>tr").on("click", function () {
+        let code = $(this).children().eq(0).text();
+        let description = $(this).children().eq(1).text();
+        let qty = $(this).children().eq(2).text();
+        let unitPrice = $(this).children().eq(3).text();
+        console.log(code, description, qty, unitPrice);
+
+        $("#txtItemID").val(code);
+        $("#txtItemName").val(description);
+        $("#txtItemQty").val(qty);
+        $("#txtItemPrice").val(unitPrice);
+    });
+    $("#btnAddItem").attr('disabled', true);
+}
+
