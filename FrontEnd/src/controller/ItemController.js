@@ -129,3 +129,31 @@ function blindClickEvents() {
     $("#btnAddItem").attr('disabled', true);
 }
 
+
+/**
+ * Search id and Load Table
+ * */
+$("#ItemIdSearch").on("keypress", function (event) {
+    if (event.which === 13) {
+        var search = $("#ItemIdSearch").val();
+        $("#ItemTable").empty();
+        $.ajax({
+            url: baseUrlItem + "item/searchItemCode/?code="+ search,
+            method: "GET",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (res) {
+                console.log(res);
+                let row = "<tr><td>" + res.code + "</td><td>" + res.description + "</td><td>" + res.qty + "</td><td>" + res.unitPrice + "</td></tr>";
+                $("#ItemTable").append(row);
+                blindClickEvents();
+            },
+            error: function (error) {
+                loadAllItems();
+                let message = JSON.parse(error.responseText).message;
+                emptyMassage(message);
+            }
+        })
+    }
+});
+
