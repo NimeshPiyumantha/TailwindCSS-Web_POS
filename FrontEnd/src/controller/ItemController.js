@@ -16,7 +16,7 @@ $("#btnDeleteItem").attr('disabled', true);
  * Item Save
  * Item ID
  * */
-generateItemID();
+
 function generateItemID() {
     $("#txtItemID").val("I00-001");
     $.ajax({
