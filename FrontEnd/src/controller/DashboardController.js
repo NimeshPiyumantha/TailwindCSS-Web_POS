@@ -47,3 +47,5 @@ $("#itemBtn,.itemBtn").click(function () {
     $("#OrderSection").css('display', 'none');
     $("#OrderDetails").css('display', 'none');
 });
+
+let baseUrlDashboard = "http://localhost:8080/BackEnd_war/";
