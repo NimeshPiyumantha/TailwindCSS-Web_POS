@@ -78,3 +78,34 @@ function setTextFieldValues(code, description, qty, price) {
 
 }
 
+/**
+ * load all Item Method
+ * */
+function loadAllItems() {
+    $("#ItemTable").empty();
+    $.ajax({
+        url: baseUrlItem + "item/loadAllItem",
+        method: "GET",
+        dataType: "json",
+        success: function (res) {
+            console.log(res);
+            for (let i of res.data) {
+                let code = i.code;
+                let description = i.description;
+                let qty = i.qty;
+                let unitPrice = i.unitPrice;
+
+                let row = "<tr><td>" + code + "</td><td>" + description + "</td><td>" + qty + "</td><td>" + unitPrice + "</td></tr>";
+                $("#ItemTable").append(row);
+            }
+            blindClickEvents();
+            generateItemID();
+            setTextFieldValues("", "", "", "");
+            console.log(res.message);
+        },
+        error: function (error) {
+            let message = JSON.parse(error.responseText).message;
+            console.log(message);
+        }
+    });
+}
