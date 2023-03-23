@@ -15,6 +15,13 @@ $(document).ready(function () {
   $("#OrderDetails").css('display', 'none');
 });
 
+$("#homeBtn,.homeBtn").click(function () {
+  $("#HomeSection").css('display', 'block');
+  $("#CustomerSection").css('display', 'none');
+  $("#ItemSection").css('display', 'none');
+  $("#OrderSection").css('display', 'none');
+  $("#OrderDetails").css('display', 'none');
+});
 
 
 
