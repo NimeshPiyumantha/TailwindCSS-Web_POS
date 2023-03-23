@@ -80,3 +80,19 @@ $.ajax({
 
     }
 });
+
+$("#txtOrderCount").val("00");
+$.ajax({
+    url: baseUrlDashboard + "orders/ordersCount",
+    method: "GET",
+    contentType: "application/json",
+    dataType: "json",
+    success: function (resp) {
+        let num = resp.count;
+        $("#txtOrderCount").text(num);
+
+    },
+    error: function (ob, statusText, error) {
+
+    }
+});
