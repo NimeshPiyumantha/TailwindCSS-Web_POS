@@ -64,3 +64,19 @@ $.ajax({
 
     }
 });
+
+$("#txtItemsCount").val("00");
+$.ajax({
+    url: baseUrlDashboard + "item/itemCount",
+    method: "GET",
+    contentType: "application/json",
+    dataType: "json",
+    success: function (resp) {
+        let num = resp.count;
+        $("#txtItemsCount").text(num);
+
+    },
+    error: function (ob, statusText, error) {
+
+    }
+});
