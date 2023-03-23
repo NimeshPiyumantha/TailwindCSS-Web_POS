@@ -62,7 +62,7 @@ $("#btnSaveCustomer").click(function () {
 /**
  * clear input fields Values Method
  * */
-function setTextFieldValues(id, name, address, salary) {
+function setTextFieldValuesCus(id, name, address, salary) {
     $("#txtCusId").val(id);
     $("#txtCusName").val(name);
     $("#txtCusAddress").val(address);
@@ -93,9 +93,9 @@ function loadAllCustomer() {
                 let row = "<tr><td>" + id + "</td><td>" + name + "</td><td>" + address + "</td><td>" + salary + "</td></tr>";
                 $("#customerTable").append(row);
             }
-            blindClickEvents();
+            blindClickEventsCus();
             generateCustomerID();
-            setTextFieldValues("", "", "", "");
+            setTextFieldValuesCus("", "", "", "");
             console.log(res.message);
         }, error: function (error) {
             let message = JSON.parse(error.responseText).message;
@@ -108,7 +108,7 @@ function loadAllCustomer() {
 /**
  * Table Listener Click and Load textFields
  * */
-function blindClickEvents() {
+function blindClickEventsCus() {
     $("#customerTable>tr").on("click", function () {
         let id = $(this).children().eq(0).text();
         let name = $(this).children().eq(1).text();
@@ -286,7 +286,7 @@ $("#txtCustomerSalary").on('keydown', function (event) {
     }
 });
 
-function setButtonState(value) {
+function setButtonStateCus(value) {
     if (value > 0) {
         $("#btnSaveCustomer").attr('disabled', true);
         $("#btnUpdateCustomer").attr('disabled', true);

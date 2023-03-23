@@ -43,19 +43,19 @@
             </div>
             <!-- Menu Items -->
             <div class="hidden space-x-5 lg:flex md:flex">
-                <a class="hover:text-darkGrayishBlue font-semibold" href="#"
+                <a class="hover:text-darkGrayishBlue font-semibold homeBtn" href="#"
                 >Home</a
                 >
-                <a class="hover:text-darkGrayishBlue font-semibold" href="#"
+                <a class="hover:text-darkGrayishBlue font-semibold customerBtn" href="#"
                 >Customer</a
                 >
-                <a class="hover:text-darkGrayishBlue font-semibold" href="#"
+                <a class="hover:text-darkGrayishBlue font-semibold itemBtn" href="#"
                 >Items</a
                 >
-                <a class="hover:text-darkGrayishBlue font-semibold" href="#"
+                <a class="hover:text-darkGrayishBlue font-semibold orderBtn" href="#"
                 >Place Order</a
                 >
-                <a class="hover:text-darkGrayishBlue font-semibold" href="#"
+                <a class="hover:text-darkGrayishBlue font-semibold orderDetailsBtn" href="#"
                 >Order Details</a
                 >
             </div>
@@ -83,11 +83,11 @@
                     class="absolute flex-col items-center hidden self-end py-8 mt-10 space-y-6 font-bold bg-white text-sm md:-auto md:self-auto left-6 right-6 drop-shadow-md z-50"
                     id="menu"
             >
-                <a href="#">Home</a>
-                <a href="#">Customer</a>
-                <a href="#">Items</a>
-                <a href="#">Place Order</a>
-                <a href="#">Order Details</a>
+                <a href="#" id="homeBtn">Home</a>
+                <a href="#" id="customerBtn">Customer</a>
+                <a href="#" id="itemBtn">Items</a>
+                <a href="#" id="orderBtn">Place Order</a>
+                <a href="#" id="orderDetailsBtn">Order Details</a>
                 <a
                         class="mr-3 p-3 px-7 py-2 text-center text-white bg-brightRed rounded-full baseline hover:bg-brightRedLight font-bold"
                         href="#"
@@ -99,8 +99,11 @@
 </header>
 
 <main>
+    <section id="HomeSection">
+        <h1>Hi</h1>
+    </section>
     <!-- Customer Section -->
-    <section id="customer">
+    <section id="CustomerSection">
         <!-- Flex Container -->
         <div
                 class="h-full w-full container flex flex-col-reverse items-center px-6 mx-auto mt-5 space-y-0 md:space-y-0 md:flex-row"
@@ -280,7 +283,7 @@
     </section>
 
     <!-- Item Section -->
-    <section id="Item">
+    <section id="ItemSection">
         <!-- Flex Container -->
         <div
                 class="h-full w-full container flex flex-col-reverse items-center px-6 mx-auto mt-5 space-y-0 md:space-y-0 md:flex-row"
@@ -464,10 +467,13 @@
         rel="script"
         src="../assets/styles/sweetalert2-11.6.16/sweetalert2.min.js"
 ></script>
-<!--<script src="controller/CustomerController.js"></script>-->
-<script src="controller/ItemController.js"></script>
 <script rel="script" src="script.js"></script>
 <script rel="script" src="util/alert.js"></script>
 <script rel="script" src="util/validation.js"></script>
+
+<script src="controller/CustomerController.js" rel="script"></script>
+<script src="controller/ItemController.js" rel="script"></script>
+
+
 </body>
 </html>

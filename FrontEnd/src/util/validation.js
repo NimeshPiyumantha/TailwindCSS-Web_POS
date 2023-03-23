@@ -14,6 +14,7 @@ function checkValidity(object) {
         }
     }
     setButtonState(errorCount);
+    setButtonStateCus(errorCount);
 }
 
 function check(regex, txtField) {
