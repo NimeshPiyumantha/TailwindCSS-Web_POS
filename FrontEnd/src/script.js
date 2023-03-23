@@ -32,3 +32,10 @@ $("#customerBtn,.customerBtn").click(function () {
   $("#OrderDetails").css('display', 'none');
 });
 
+$("#itemBtn,.itemBtn").click(function () {
+  $("#HomeSection").css('display', 'none');
+  $("#CustomerSection").css('display', 'none');
+  $("#ItemSection").css('display', 'block');
+  $("#OrderSection").css('display', 'none');
+  $("#OrderDetails").css('display', 'none');
+});
