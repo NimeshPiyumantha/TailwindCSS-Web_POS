@@ -9,5 +9,8 @@ import org.springframework.data.jpa.repository.Query;
  * @since : 0.1.0
  **/
 public interface PlaceOrderRepo extends JpaRepository<Orders, String> {
+    @Query(value = "SELECT oid FROM Orders ORDER BY oid DESC LIMIT 1", nativeQuery = true)
+    String getLastIndex();
+
 
 }
