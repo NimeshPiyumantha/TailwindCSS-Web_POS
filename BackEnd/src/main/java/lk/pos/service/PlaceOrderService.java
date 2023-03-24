@@ -15,10 +15,14 @@ import java.util.ArrayList;
  **/
 public interface PlaceOrderService {
     void placeOrder(@RequestBody OrdersDTO dto);
+
     ArrayList<OrdersDTO> LoadOrders();
+
     ArrayList<OrderDetailsDTO> LoadOrderDetails();
+
     @ResponseBody
     CustomDTO OrderIdGenerate();
+
     @ResponseBody
     CustomDTO getSumOrders();
 }
