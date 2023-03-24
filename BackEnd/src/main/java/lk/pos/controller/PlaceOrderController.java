@@ -37,4 +37,10 @@ public class PlaceOrderController {
         return new ResponseUtil("OK", "Successfully Loaded. :", service.LoadOrderDetails());
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/OrderIdGenerate")
+    public @ResponseBody CustomDTO OrderIdGenerate() {
+        return service.OrderIdGenerate();
+    }
+
 }
