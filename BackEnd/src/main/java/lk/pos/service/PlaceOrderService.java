@@ -19,4 +19,6 @@ public interface PlaceOrderService {
     ArrayList<OrderDetailsDTO> LoadOrderDetails();
     @ResponseBody
     CustomDTO OrderIdGenerate();
+    @ResponseBody
+    CustomDTO getSumOrders();
 }
