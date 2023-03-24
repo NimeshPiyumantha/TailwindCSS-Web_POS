@@ -10,10 +10,12 @@ import lk.pos.repo.OrderDetailsRepo;
 import lk.pos.repo.PlaceOrderRepo;
 import lk.pos.service.PlaceOrderService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.ArrayList;
 
 /**
  * @author : Nimesh Piyumantha
@@ -46,4 +48,11 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
             itemRepo.save(item);
         }
     }
+
+    @Override
+    public ArrayList<OrdersDTO> LoadOrders() {
+        return mapper.map(repo.findAll(), new TypeToken<ArrayList<OrdersDTO>>() {
+        }.getType());
+    }
+
 }
