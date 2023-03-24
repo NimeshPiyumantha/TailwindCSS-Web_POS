@@ -1,6 +1,7 @@
 package lk.pos.service.impl;
 
 
+import lk.pos.dto.CustomDTO;
 import lk.pos.dto.OrderDetailsDTO;
 import lk.pos.dto.OrdersDTO;
 import lk.pos.entity.Item;
@@ -61,5 +62,11 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
         return mapper.map(orRepo.findAll(), new TypeToken<ArrayList<OrderDetailsDTO>>() {
         }.getType());
     }
+
+    @Override
+    public CustomDTO OrderIdGenerate() {
+        return new CustomDTO(repo.getLastIndex());
+    }
+
 
 }
