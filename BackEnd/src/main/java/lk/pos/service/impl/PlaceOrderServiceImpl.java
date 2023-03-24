@@ -1,6 +1,10 @@
 package lk.pos.service.impl;
 
 
+import lk.pos.dto.OrdersDTO;
+import lk.pos.entity.Item;
+import lk.pos.entity.OrderDetails;
+import lk.pos.entity.Orders;
 import lk.pos.repo.ItemRepo;
 import lk.pos.repo.OrderDetailsRepo;
 import lk.pos.repo.PlaceOrderRepo;
@@ -26,4 +30,20 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     private ItemRepo itemRepo;
     @Autowired
     private ModelMapper mapper;
+
+    @Override
+    public void placeOrder(OrdersDTO dto) {
+        Orders ord = mapper.map(dto, Orders.class);
+        if (repo.existsById(ord.getOid())) {
+            throw new RuntimeException("Order" + ord.getOid() + " Already added.!");
+        }
+        repo.save(ord);
+
+        //Update Item Qty
+        for (OrderDetails od : ord.getOrderDetails()) {
+            Item item = itemRepo.findById(od.getItemCode()).get();
+            item.setQty(item.getQty() - od.getQty());
+            itemRepo.save(item);
+        }
+    }
 }
