@@ -1,6 +1,6 @@
 package lk.pos.repo;
 
-import lk.ijse.spring.entity.Orders;
+import lk.pos.entity.Orders;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
