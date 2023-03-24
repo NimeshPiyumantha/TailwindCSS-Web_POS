@@ -5,6 +5,7 @@ import lk.pos.repo.ItemRepo;
 import lk.pos.repo.OrderDetailsRepo;
 import lk.pos.repo.PlaceOrderRepo;
 import lk.pos.service.PlaceOrderService;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,4 +24,6 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     private OrderDetailsRepo orRepo;
     @Autowired
     private ItemRepo itemRepo;
+    @Autowired
+    private ModelMapper mapper;
 }
