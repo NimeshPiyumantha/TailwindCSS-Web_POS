@@ -17,4 +17,11 @@ public class PlaceOrderController {
     @Autowired
     private PlaceOrderService service;
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping
+    public ResponseUtil placeOrder(@RequestBody OrdersDTO dto) {
+        service.placeOrder(dto);
+        return new ResponseUtil("Ok", "Successfully Purchased.!", null);
+    }
+
 }
