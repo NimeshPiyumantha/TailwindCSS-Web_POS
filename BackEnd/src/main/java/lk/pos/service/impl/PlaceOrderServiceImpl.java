@@ -68,5 +68,8 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
         return new CustomDTO(repo.getLastIndex());
     }
 
-
+    @Override
+    public CustomDTO getSumOrders() {
+        return new CustomDTO(repo.getSumOrders());
+    }
 }
