@@ -24,4 +24,11 @@ public class PlaceOrderController {
         return new ResponseUtil("Ok", "Successfully Purchased.!", null);
     }
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/LoadOrders")
+    public ResponseUtil LoadOrders() {
+        return new ResponseUtil("OK", "Successfully Loaded. :", service.LoadOrders());
+    }
+
+
 }
