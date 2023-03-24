@@ -1,6 +1,7 @@
 package lk.pos.service.impl;
 
 
+import lk.pos.repo.ItemRepo;
 import lk.pos.repo.OrderDetailsRepo;
 import lk.pos.repo.PlaceOrderRepo;
 import lk.pos.service.PlaceOrderService;
@@ -20,4 +21,6 @@ public class PlaceOrderServiceImpl implements PlaceOrderService {
     private PlaceOrderRepo repo;
     @Autowired
     private OrderDetailsRepo orRepo;
+    @Autowired
+    private ItemRepo itemRepo;
 }
