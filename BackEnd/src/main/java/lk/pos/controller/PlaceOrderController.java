@@ -31,4 +31,10 @@ public class PlaceOrderController {
     }
 
 
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/LoadOrderDetails")
+    public ResponseUtil LoadOrderDetails() {
+        return new ResponseUtil("OK", "Successfully Loaded. :", service.LoadOrderDetails());
+    }
+
 }
