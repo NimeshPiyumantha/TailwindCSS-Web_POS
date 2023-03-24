@@ -1,7 +1,9 @@
 package lk.pos.service.impl;
 
 
+import lk.pos.repo.PlaceOrderRepo;
 import lk.pos.service.PlaceOrderService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -13,5 +15,6 @@ import javax.transaction.Transactional;
 @Service
 @Transactional
 public class PlaceOrderServiceImpl implements PlaceOrderService {
-
+    @Autowired
+    private PlaceOrderRepo repo;
 }
