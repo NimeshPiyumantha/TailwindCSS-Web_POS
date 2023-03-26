@@ -48,6 +48,14 @@ $("#itemBtn,.itemBtn").click(function () {
     $("#OrderDetails").css('display', 'none');
 });
 
+$("#orderBtn,.orderBtn").click(function () {
+    $("#HomeSection").css('display', 'none');
+    $("#CustomerSection").css('display', 'none');
+    $("#ItemSection").css('display', 'none');
+    $("#OrderSection").css('display', 'block');
+    $("#OrderDetails").css('display', 'none');
+});
+
 let baseUrlDashboard = "http://localhost:8080/BackEnd_war/";
 $("#txtCustomerCount").val("00");
 $.ajax({
