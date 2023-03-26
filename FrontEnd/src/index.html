@@ -578,7 +578,7 @@
             <h6 class="m-1">Home > Place Order</h6>
             <hr />
           </div>
-          <div class="grid grid-cols-3 bg-sky-400 space-x-8 w-full p-3 ">
+          <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 bg-sky-400 space-x-8 w-full p-3 ">
             <div
               class="bg-slate-100 border-gray-300 border-4 h-full w-full p-3 rounded-xl"
             >
@@ -589,8 +589,8 @@
                   Invoice Details
                 </h5>
               </div>
-              
-              <div class="grid grid-cols-2 mt-6">
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1 mt-6">
                 <div class="p-2">
                   <label class="font-bold" for="orderId">Order ID :</label>
                   <input
@@ -598,6 +598,7 @@
                     id="orderId"
                     type="text"
                     value="ODI-001"
+                    readonly
                   />
                 </div>
                 <div class="p-2">
@@ -609,6 +610,28 @@
                   />
                 </div>
               </div>
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1">
+                <div class="p-2">
+                  <label class="font-bold" for="cmbCustomerId">Customer ID :</label>
+                  <select
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="cmbCustomerId"
+                    value="Customer ID">
+                  ></select>
+                </div>
+                <div class="p-2">
+                  <label class="font-bold" for="customerName">Name :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="customerName"
+                    type="text"
+                    readonly
+                  />
+                </div>
+              </div> 
+
+
             </div>
           </div>
         </div>
