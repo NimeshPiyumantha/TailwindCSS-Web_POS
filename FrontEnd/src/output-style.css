@@ -3742,8 +3742,16 @@ body {
     margin-top: 1.25rem;
   }
 
+  .lg\:block {
+    display: block;
+  }
+
   .lg\:flex {
     display: flex;
+  }
+
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:text-2xl {
