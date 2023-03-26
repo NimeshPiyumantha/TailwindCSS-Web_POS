@@ -3636,9 +3636,21 @@ body {
 }
 
 @media (min-width: 480px) {
+  .sm\:block {
+    display: block;
+  }
+
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:columns-sm {
     -moz-columns: 24rem;
          columns: 24rem;
+  }
+
+  .sm\:bg-none {
+    background-image: none;
   }
 
   .sm\:text-lg {
@@ -3654,6 +3666,11 @@ body {
   .sm\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:content-none {
+    --tw-content: none;
+    content: var(--tw-content);
   }
 }
 
@@ -3676,6 +3693,14 @@ body {
 
   .md\:hidden {
     display: none;
+  }
+
+  .md\:h-1\/2 {
+    height: 50%;
+  }
+
+  .md\:w-1\/2 {
+    width: 50%;
   }
 
   .md\:columns-md {
