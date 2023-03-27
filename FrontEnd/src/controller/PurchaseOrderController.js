@@ -244,3 +244,16 @@ function manageQtyOnHand(preQty, nowQty) {
 
     $("#qtyOnHand").val(avaQty);
 }
+
+/**
+ * Logics
+ * Place order
+ * Manage Total
+ * */
+
+function manageTotal(preTotal, nowTotal) {
+    total -= preTotal;
+    total += nowTotal;
+
+    $("#txtTotal").val(total);
+}
