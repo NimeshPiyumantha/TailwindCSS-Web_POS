@@ -756,10 +756,6 @@ video {
   margin: 1rem;
 }
 
-.m-5 {
-  margin: 1.25rem;
-}
-
 .m-7 {
   margin: 1.75rem;
 }
@@ -948,6 +944,10 @@ video {
   height: 3.5rem;
 }
 
+.h-2\/3 {
+  height: 66.666667%;
+}
+
 .h-2\/5 {
   height: 40%;
 }
@@ -1050,10 +1050,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-2\/3 {
-  height: 66.666667%;
 }
 
 .max-h-\[calc\(100\%-64px\)\] {
