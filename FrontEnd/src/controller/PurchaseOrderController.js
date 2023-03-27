@@ -217,3 +217,14 @@ function reduceQty(orderQty) {
     reduceQty = reduceQty - minQty;
     $("#qtyOnHand").val(reduceQty);
 }
+
+/**
+ * Logics
+ * Place order
+ * Calculate Total
+ * */
+
+function calcTotal(amount) {
+    total += amount;
+    $("#txtTotal").val(total);
+}
