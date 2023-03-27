@@ -828,10 +828,31 @@
           </div>
 
            <!-- View Cart Details Table Start -->
+           <div
+           class="relative overflow-x-auto m-12 p-4 lg:text-base sm:text-md font-Ubuntu"
+         >
+           <table class="w-full text-white dark:text-black text-center">
+             <thead
+               class="text-white uppercase bg-brightRedLight dark:brightRedLight dark:text-black sm:text-sm md:text-lg"
+             >
+               <tr>
+                 <th class="px-6 py-3" scope="col">Item Code</th>
+                 <th class="px-6 py-3" scope="col">Item Name</th>
+                 <th class="px-6 py-3" scope="col">Price</th>
+                 <th class="px-6 py-3" scope="col">Buy Qty</th>
+                 <th class="px-6 py-3" scope="col">Total</th>
+               </tr>
+             </thead>
+             <tbody
+               class="text-white uppercase bg-red-200 dark:brightRedLight dark:text-black"
+               id="tblAddToCart"
+             ></tbody>
+           </table>
+         </div>
         </div>
       </section>
 
-      
+
     </main>
     <!--import jQuery library-->
     <script
