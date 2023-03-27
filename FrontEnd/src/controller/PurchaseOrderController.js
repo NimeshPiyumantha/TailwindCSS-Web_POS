@@ -413,3 +413,11 @@ function clearDetails() {
     $("#btnAddToCart").attr('disabled', true);
 }
 
+/**
+ * Logics
+ * Place order
+ * Clear Button
+ * */
+$("#btnClearAll").click(function () {
+    clearDetails();
+});
