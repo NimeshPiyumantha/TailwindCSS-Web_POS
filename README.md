@@ -1,6 +1,22 @@
 ﻿# TailwindCSS-Web_POS
 
-- **This is learning tailwindcss Framework.**
+- **This is learning TailwindCSS Framework.**
+
+[![wakatime](https://wakatime.com/badge/user/bde2acba-42bd-46e8-a905-d74c6f260407/project/c1d58a9f-2874-4271-b1f8-11c284e91510.svg)](https://wakatime.com/badge/user/bde2acba-42bd-46e8-a905-d74c6f260407/project/c1d58a9f-2874-4271-b1f8-11c284e91510)
+
+### - Back End
+* Spring
+* Maven
+* Hibernate
+* Lombok
+
+### - Front End
+* HTML
+* Javascript
+* CSS
+* TailwindCSS
+* AJAX
+
 
 ### Link
 * 🔗 <a href="" target="_blank">GitHub Page</a>
