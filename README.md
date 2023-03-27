@@ -19,7 +19,7 @@
 
 
 ### Link
-* 🔗 <a href="" target="_blank">GitHub Page</a>
+* 🔗 <a href="https://nimeshpiyumantha.github.io/TailwindCSS-Web_POS/FrontEnd/src/" target="_blank">GitHub Page</a>
 
 ## Home
 ![alt text](https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS/blob/master/FrontEnd/assets/ss/Screenshot%20(1).png)
