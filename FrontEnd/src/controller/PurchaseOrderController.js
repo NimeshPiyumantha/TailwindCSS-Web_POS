@@ -228,3 +228,19 @@ function calcTotal(amount) {
     total += amount;
     $("#txtTotal").val(total);
 }
+
+/**
+ * Logics
+ * Place order
+ * Manage Available Qty
+ * */
+function manageQtyOnHand(preQty, nowQty) {
+    var preQty = parseInt(preQty);
+    var nowQty = parseInt(nowQty);
+    let avaQty = parseInt($("#qtyOnHand").val());
+
+    avaQty = avaQty + preQty;
+    avaQty = avaQty - nowQty;
+
+    $("#qtyOnHand").val(avaQty);
+}
