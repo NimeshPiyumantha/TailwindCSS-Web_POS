@@ -114,3 +114,24 @@ $.ajax({
         console.log(message);
     }
 });
+
+$("#cmbItemCode").click(function () {
+    var search = $("#cmbItemCode").val();
+    $.ajax({
+        url: baseUrlPlaceOrder + "item/searchItemCode/?code="+ search,
+        method: "GET",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (res) {
+            console.log(res);
+            $("#itemName").val(res.description);
+            $("#itemPrice").val(res.unitPrice);
+            $("#qtyOnHand").val(res.qty);
+        },
+        error: function (error) {
+            let message = JSON.parse(error.responseText).message;
+            console.log(message);
+        }
+    })
+});
+
