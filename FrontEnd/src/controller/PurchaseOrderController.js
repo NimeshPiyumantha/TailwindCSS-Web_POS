@@ -135,3 +135,20 @@ $("#cmbItemCode").click(function () {
     })
 });
 
+/**
+ * Items Details
+ * */
+
+let itemCode;
+let itemName;
+let itemPrice;
+let itemQty;
+let itemOrderQty;
+
+/**
+ * Order Details
+ * */
+let total = 0;
+let discount = 0;
+let subTotal = 0;
+
