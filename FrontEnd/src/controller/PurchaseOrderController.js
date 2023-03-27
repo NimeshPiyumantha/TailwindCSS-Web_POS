@@ -296,4 +296,17 @@ $(document).on("change keyup blur", "#buyQty", function () {
     }
 });
 
+/**
+ * Logics
+ * Place order
+ * Enter Discount and sub Total display
+ * */
+
+$(document).on("change keyup blur", "#txtDiscount", function () {
+    discount = $("#txtDiscount").val();
+    discount = (total / 100) * discount;
+    subTotal = total - discount;
+
+    $("#txtSubTotal").val(subTotal);
+});
 
