@@ -813,10 +813,9 @@
                 </div>
               </div>
             </div>
-
           </div>
 
-           <!--clear All Button Section Start-->
+          <!--clear All Button Section Start-->
           <div class="p-4 w-full flex justify-around">
             <button
               class="bg-red-400 lg:w-1/6 md:2/6 sm:3/6 rounded-lg border-2 border-gray-300 p-1.5 font-bold hover:bg-red-500 hover:text-white lg:text-base md:text-sm"
@@ -827,28 +826,28 @@
             </button>
           </div>
 
-           <!-- View Cart Details Table Start -->
-           <div
-           class="relative overflow-x-auto m-12 p-4 lg:text-base sm:text-md font-Ubuntu"
-         >
-           <table class="w-full text-white dark:text-black text-center">
-             <thead
-               class="text-white uppercase bg-brightRedLight dark:brightRedLight dark:text-black sm:text-sm md:text-lg"
-             >
-               <tr>
-                 <th class="px-6 py-3" scope="col">Item Code</th>
-                 <th class="px-6 py-3" scope="col">Item Name</th>
-                 <th class="px-6 py-3" scope="col">Price</th>
-                 <th class="px-6 py-3" scope="col">Buy Qty</th>
-                 <th class="px-6 py-3" scope="col">Total</th>
-               </tr>
-             </thead>
-             <tbody
-               class="text-white uppercase bg-red-200 dark:brightRedLight dark:text-black"
-               id="tblAddToCart"
-             ></tbody>
-           </table>
-         </div>
+          <!-- View Cart Details Table Start -->
+          <div
+            class="relative overflow-x-auto m-12 p-4 lg:text-base sm:text-md font-Ubuntu"
+          >
+            <table class="w-full text-white dark:text-black text-center">
+              <thead
+                class="text-white uppercase bg-brightRedLight dark:brightRedLight dark:text-black sm:text-sm md:text-lg"
+              >
+                <tr>
+                  <th class="px-6 py-3" scope="col">Item Code</th>
+                  <th class="px-6 py-3" scope="col">Item Name</th>
+                  <th class="px-6 py-3" scope="col">Price</th>
+                  <th class="px-6 py-3" scope="col">Buy Qty</th>
+                  <th class="px-6 py-3" scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody
+                class="text-white uppercase bg-red-200 dark:brightRedLight dark:text-black"
+                id="tblAddToCart"
+              ></tbody>
+            </table>
+          </div>
         </div>
       </section>
 
@@ -876,14 +875,46 @@
             <h6 class="m-1">Home > Orders Details</h6>
             <hr />
           </div>
-          <div
-            class="grid grid-cols-1 p-3"
-          >
-          
-          
+          <div class="grid grid-cols-1 p-3">
+            <!-- OrderDetails Details -->
+            <div
+              class="bg-slate-100 border-gray-300 border-4 h-full w-full p-3 rounded-xl sectionBorder"
+            >
+              <div class="h-5">
+                <h5
+                  class="text-center p-2 text-white rounded-lg bg-brightRedLight sm:text-sm lg:text-lg font-bold font-Pooppins"
+                >
+                  Orders
+                </h5>
+              </div>
+
+              <!-- View Order Table Start -->
+              <div
+                class="relative overflow-x-auto m-7 p-3 lg:text-base sm:text-md font-Ubuntu"
+              >
+                <table
+                  class="w-full h-2/3 text-white dark:text-black text-center"
+                >
+                  <thead
+                    class="text-white uppercase bg-brightRedLight dark:brightRedLight dark:text-black sm:text-sm md:text-lg"
+                  >
+                    <tr>
+                      <th class="px-5 py-3" scope="col">Order Id</th>
+                      <th class="px-5 py-3" scope="col">Order Date</th>
+                      <th class="px-5 py-3" scope="col">Customer Id</th>
+                    </tr>
+                  </thead>
+                  <tbody
+                    class="text-white uppercase bg-red-200 dark:brightRedLight dark:text-black"
+                    id="tblAddToCart"
+                  ></tbody>
+                </table>
+              </div>
+
+            </div>
+          </div>
         </div>
       </section>
-
     </main>
     <!--import jQuery library-->
     <script
