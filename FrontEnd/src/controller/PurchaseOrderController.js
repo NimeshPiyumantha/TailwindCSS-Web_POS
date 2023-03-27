@@ -205,3 +205,15 @@ $("#btnAddToCart").on("click", function () {
 
     });
 });
+
+/**
+ * Logics
+ * Place order
+ * Reduce QtyOnHand
+ * */
+function reduceQty(orderQty) {
+    let minQty = parseInt(orderQty);
+    let reduceQty = parseInt($("#qtyOnHand").val());
+    reduceQty = reduceQty - minQty;
+    $("#qtyOnHand").val(reduceQty);
+}
