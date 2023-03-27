@@ -852,6 +852,302 @@
         </div>
       </section>
 
+      <!-- Order Deails Section -->
+      <section id="OrderDetails">
+        <!-- Flex Container -->
+        <div
+          class="h-full w-full container flex flex-col-reverse items-center px-6 mx-auto mt-5 space-y-0 md:space-y-0 md:flex-row"
+        >
+          <!-- Header -->
+          <div
+            class="relative inline-block mt-3 lg:mt-3 md:mt-3 lg:text-2xl sm:text-xl font-Ubuntu"
+          >
+            <h2><i class="bi bi-people"></i> Place Order</h2>
+          </div>
+        </div>
+        <!-- Container -->
+        <div
+          class="bg-brightWhite sectionBorder h-full w-full container flex flex-col px-2 mx-auto mt-1 space-y-0 md:space-y-0 rounded-xl"
+        >
+          <!-- Header -->
+          <div
+            class="relative inline-block mt-3 lg:mt-5 md:mt-4 lg:text-xl sm:text-lg font-Ubuntu"
+          >
+            <h6 class="m-1">Home > Place Order</h6>
+            <hr />
+          </div>
+          <div
+            class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 lg:space-x-5 gap-5 lg:space-y-0 md:space-x-1 md:space-y-0 w-full p-3 sm:space-y-4 sm:space-x-0"
+          >
+            <!-- Invoice Details -->
+            <div
+              class="bg-slate-100 border-gray-300 border-4 h-full w-11/12 p-3 rounded-xl sectionBorder"
+            >
+              <div class="h-5">
+                <h5
+                  class="text-center p-2 text-white rounded-lg bg-brightRedLight sm:text-sm lg:text-lg font-bold font-Pooppins"
+                >
+                  Invoice Details
+                </h5>
+              </div>
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1 mt-6">
+                <div class="p-2">
+                  <label class="font-bold" for="orderId">Order ID :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="orderId"
+                    type="text"
+                    value="ODI-001"
+                    readonly
+                  />
+                </div>
+                <div class="p-2">
+                  <label class="font-bold" for="orderDate">Order Date :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="orderDate"
+                    type="date"
+                  />
+                </div>
+              </div>
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1">
+                <div class="p-2">
+                  <label class="font-bold" for="cmbCustomerId"
+                    >Customer ID :</label
+                  >
+                  <select
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="cmbCustomerId"
+                    value="Customer ID"
+                  >
+                    >
+                  </select>
+                </div>
+                <div class="p-2">
+                  <label class="font-bold" for="customerName">Name :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="customerName"
+                    type="text"
+                    readonly
+                  />
+                </div>
+              </div>
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1">
+                <div class="p-2">
+                  <label class="font-bold" for="customerAddress"
+                    >Address :</label
+                  >
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="customerAddress"
+                    type="text"
+                    readonly
+                  />
+                </div>
+                <div class="p-2">
+                  <label class="font-bold" for="customerSalary">Salary :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="customerSalary"
+                    type="text"
+                    readonly
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Item Details -->
+            <div
+              class="bg-slate-100 border-gray-300 border-4 h-full w-11/12 p-3 rounded-xl sectionBorder"
+            >
+              <div class="h-5">
+                <h5
+                  class="text-center p-2 text-white rounded-lg bg-brightRedLight sm:text-sm lg:text-lg font-bold font-Pooppins"
+                >
+                  Item Details
+                </h5>
+              </div>
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1 mt-6">
+                <div class="p-2">
+                  <label class="font-bold" for="cmbItemCode">Item Code :</label>
+                  <select
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="cmbItemCode"
+                    value="Item Code"
+                  >
+                    >
+                  </select>
+                </div>
+                <div class="p-2">
+                  <label class="font-bold" for="itemName">Item Name :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="itemName"
+                    type="text"
+                    readonly
+                  />
+                </div>
+              </div>
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1">
+                <div class="p-2">
+                  <label class="font-bold" for="itemPrice">Unit Price :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="itemPrice"
+                    type="text"
+                    readonly
+                  />
+                </div>
+                <div class="p-2">
+                  <label class="font-bold" for="qtyOnHand">Qty :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="qtyOnHand"
+                    type="text"
+                    readonly
+                  />
+                </div>
+              </div>
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1">
+                <div class="p-2">
+                  <label class="font-bold" for="buyQty">Buy Qty :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="buyQty"
+                    type="text"
+                  />
+                </div>
+                <div class="p-2 mt-5">
+                  <button
+                    class="bg-blue-300 rounded-lg border-2 border-gray-300 w-4/5 p-1.5 font-bold hover:bg-blue-400 hover:text-white lg:text-base md:text-sm"
+                    id="btnAddToCart"
+                    type="button"
+                  >
+                    Add Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payment Details -->
+            <div
+              class="bg-slate-100 border-gray-300 border-4 h-full w-11/12 p-3 rounded-xl sectionBorder"
+            >
+              <div class="h-5">
+                <h5
+                  class="text-center p-2 text-white rounded-lg bg-brightRedLight sm:text-sm lg:text-lg font-bold font-Pooppins"
+                >
+                  Payment Details
+                </h5>
+              </div>
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1 mt-6">
+                <div class="p-2">
+                  <label class="font-bold" for="txtTotal">Total :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="txtTotal"
+                    type="text"
+                    readonly
+                  />
+                </div>
+                <div class="p-2">
+                  <label class="font-bold" for="txtDiscount">Discount :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="txtDiscount"
+                    type="text"
+                  />
+                </div>
+              </div>
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1">
+                <div class="p-2">
+                  <label class="font-bold" for="txtSubTotal">Sub Total :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="txtSubTotal"
+                    type="text"
+                    readonly
+                  />
+                </div>
+                <div class="p-2">
+                  <label class="font-bold" for="txtCash">Cash :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="txtCash"
+                    type="text"
+                  />
+                  <strong class="control-error" id="lblCheckSubtotal"></strong>
+                </div>
+              </div>
+
+              <div class="grid lg:grid-cols-2 md:grid-cols-1">
+                <div class="p-2">
+                  <label class="font-bold" for="txtBalance">Balance :</label>
+                  <input
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1 dark:bg-white-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-red"
+                    id="txtBalance"
+                    type="text"
+                    readonly
+                  />
+                </div>
+                <div class="p-2 mt-5">
+                  <button
+                    class="bg-green-300 rounded-lg border-2 border-gray-300 w-4/5 p-1.5 font-bold hover:bg-green-400 hover:text-white lg:text-base md:text-sm"
+                    id="btnPurchase"
+                    type="submit"
+                  >
+                    Purchase
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+           <!--clear All Button Section Start-->
+          <div class="p-4 w-full flex justify-around">
+            <button
+              class="bg-red-400 lg:w-1/6 md:2/6 sm:3/6 rounded-lg border-2 border-gray-300 p-1.5 font-bold hover:bg-red-500 hover:text-white lg:text-base md:text-sm"
+              id="btnClearAll"
+              type="button"
+            >
+              Clear All
+            </button>
+          </div>
+
+           <!-- View Cart Details Table Start -->
+           <div
+           class="relative overflow-x-auto m-12 p-4 lg:text-base sm:text-md font-Ubuntu"
+         >
+           <table class="w-full text-white dark:text-black text-center">
+             <thead
+               class="text-white uppercase bg-brightRedLight dark:brightRedLight dark:text-black sm:text-sm md:text-lg"
+             >
+               <tr>
+                 <th class="px-6 py-3" scope="col">Item Code</th>
+                 <th class="px-6 py-3" scope="col">Item Name</th>
+                 <th class="px-6 py-3" scope="col">Price</th>
+                 <th class="px-6 py-3" scope="col">Buy Qty</th>
+                 <th class="px-6 py-3" scope="col">Total</th>
+               </tr>
+             </thead>
+             <tbody
+               class="text-white uppercase bg-red-200 dark:brightRedLight dark:text-black"
+               id="tblAddToCart"
+             ></tbody>
+           </table>
+         </div>
+        </div>
+      </section>
 
     </main>
     <!--import jQuery library-->
