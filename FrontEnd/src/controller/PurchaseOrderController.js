@@ -257,3 +257,23 @@ function manageTotal(preTotal, nowTotal) {
 
     $("#txtTotal").val(total);
 }
+
+/**
+ * Logics
+ * Place order
+ * Table Load
+ * */
+$("#tblAddToCart").empty();
+function loadCartTableDetail() {
+    itemCode = $("#cmbItemCode").val();
+    itemName = $("#itemName").val();
+    itemPrice = $("#itemPrice").val();
+    itemQty = $("#qtyOnHand").val();
+    itemOrderQty = $("#buyQty").val();
+
+    let total = itemPrice * itemOrderQty;
+    let row = `<tr><td>${itemCode}</td><td>${itemName}</td><td>${itemPrice}</td><td>${itemOrderQty}</td><td>${total}</td></tr>`;
+
+    $("#tblAddToCart").append(row);
+}
+
