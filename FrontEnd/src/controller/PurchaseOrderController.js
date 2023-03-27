@@ -346,3 +346,59 @@ function setDates() {
 }
 
 
+/**
+ * Logics
+ * Place order
+ * Purchase Order button
+ * */
+
+$("#btnPurchase").click(function () {
+
+    var orderDetails = [];
+    for (let i = 0; i < $("#tblAddToCart tr").length; i++) {
+        var detailOb = {
+            oid: $("#orderId").val(),
+            itemCode: $("#tblAddToCart tr").children(':nth-child(1)')[i].innerText,
+            qty: $("#tblAddToCart tr").children(':nth-child(4)')[i].innerText,
+            unitPrice: $("#tblAddToCart tr").children(':nth-child(5)')[i].innerText
+        }
+        orderDetails.push(detailOb);
+    }
+    var orderId = $("#orderId").val();
+    var customerId = $("#cmbCustomerId option:selected").text();
+    var date = $("#orderDate").val();
+
+    var orderOb = {
+        "oid": orderId,
+        "date": date,
+        "cusID": customerId,
+        "orderDetails": orderDetails
+    }
+    console.log(orderOb)
+    console.log(orderDetails)
+
+    $.ajax({
+        url: baseUrlPlaceOrder + "orders",
+        method: "POST",
+        contentType: "application/json",
+        dataType: "json",
+        data: JSON.stringify(orderOb),
+        success: function (res) {
+            saveUpdateAlert("Order", res.message);
+            generateOrderID();
+
+        },
+        error: function (error) {
+            let message = JSON.parse(error.responseText).message;
+            unSuccessUpdateAlert("Order", message);
+        }
+    });
+
+    clearDetails();
+    $("#tblAddToCart").empty();
+    $("#btnPurchase").attr('disabled', true);
+    $("#btnAddToCart").attr('disabled', true);
+    total = 0;
+});
+
+
