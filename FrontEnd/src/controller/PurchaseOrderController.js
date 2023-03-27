@@ -4,3 +4,7 @@
  **/
 
 let baseUrlPlaceOrder = "http://localhost:8080/BackEnd_war/";
+
+$("#btnPurchase").attr('disabled', true);
+$("#btnAddToCart").attr('disabled', true);
+
