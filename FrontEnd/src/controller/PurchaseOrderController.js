@@ -91,3 +91,26 @@ $("#cmbCustomerId").click(function () {
 
 });
 
+/**
+ * Items Details
+ * Item Select Combo
+ * */
+$("#cmbItemCode").empty();
+$.ajax({
+    url: baseUrlPlaceOrder + "item/loadAllItem",
+    method: "GET",
+    dataType: "json",
+    success: function (res) {
+        console.log(res);
+        for (let i of res.data) {
+            let code = i.code;
+
+            $("#cmbItemCode").append(`<option>${code}</option>`);
+        }
+        console.log(res.message);
+    },
+    error: function (error) {
+        let message = JSON.parse(error.responseText).message;
+        console.log(message);
+    }
+});
