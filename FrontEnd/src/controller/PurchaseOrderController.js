@@ -47,10 +47,7 @@ function generateOrderID() {
  * */
 $("#cmbCustomerId").empty();
 $.ajax({
-    url: baseUrlPlaceOrder + "customer/loadAllCustomer",
-    method: "GET",
-    dataType: "json",
-    success: function (res) {
+    url: baseUrlPlaceOrder + "customer/loadAllCustomer", method: "GET", dataType: "json", success: function (res) {
         console.log(res);
         setDates();
 
@@ -61,8 +58,7 @@ $.ajax({
         }
         generateOrderID();
         console.log(res.message);
-    },
-    error: function (error) {
+    }, error: function (error) {
         let message = JSON.parse(error.responseText).message;
         console.log(message);
     }
@@ -73,7 +69,7 @@ $.ajax({
 $("#cmbCustomerId").click(function () {
     var search = $("#cmbCustomerId").val();
     $.ajax({
-        url: baseUrlPlaceOrder + "customer/searchCusId/?id="+ search,
+        url: baseUrlPlaceOrder + "customer/searchCusId/?id=" + search,
         method: "GET",
         contentType: "application/json",
         dataType: "json",
@@ -97,10 +93,7 @@ $("#cmbCustomerId").click(function () {
  * */
 $("#cmbItemCode").empty();
 $.ajax({
-    url: baseUrlPlaceOrder + "item/loadAllItem",
-    method: "GET",
-    dataType: "json",
-    success: function (res) {
+    url: baseUrlPlaceOrder + "item/loadAllItem", method: "GET", dataType: "json", success: function (res) {
         console.log(res);
         for (let i of res.data) {
             let code = i.code;
@@ -108,8 +101,7 @@ $.ajax({
             $("#cmbItemCode").append(`<option>${code}</option>`);
         }
         console.log(res.message);
-    },
-    error: function (error) {
+    }, error: function (error) {
         let message = JSON.parse(error.responseText).message;
         console.log(message);
     }
@@ -118,7 +110,7 @@ $.ajax({
 $("#cmbItemCode").click(function () {
     var search = $("#cmbItemCode").val();
     $.ajax({
-        url: baseUrlPlaceOrder + "item/searchItemCode/?code="+ search,
+        url: baseUrlPlaceOrder + "item/searchItemCode/?code=" + search,
         method: "GET",
         contentType: "application/json",
         dataType: "json",
@@ -264,6 +256,7 @@ function manageTotal(preTotal, nowTotal) {
  * Table Load
  * */
 $("#tblAddToCart").empty();
+
 function loadCartTableDetail() {
     itemCode = $("#cmbItemCode").val();
     itemName = $("#itemName").val();
@@ -369,10 +362,7 @@ $("#btnPurchase").click(function () {
     var date = $("#orderDate").val();
 
     var orderOb = {
-        "oid": orderId,
-        "date": date,
-        "cusID": customerId,
-        "orderDetails": orderDetails
+        "oid": orderId, "date": date, "cusID": customerId, "orderDetails": orderDetails
     }
     console.log(orderOb)
     console.log(orderDetails)
@@ -436,10 +426,7 @@ $("#tblAddToCart").dblclick(function () {
         confirmButtonText: 'Yes',
         denyButtonText: 'No',
         customClass: {
-            actions: 'my-actions',
-            cancelButton: 'order-1 right-gap',
-            confirmButton: 'order-2',
-            denyButton: 'order-3',
+            actions: 'my-actions', cancelButton: 'order-1 right-gap', confirmButton: 'order-2', denyButton: 'order-3',
         }
     }).then((result) => {
         if (result.isConfirmed) {

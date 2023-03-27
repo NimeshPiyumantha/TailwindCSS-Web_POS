@@ -12,6 +12,7 @@ loadAllItems();
 $("#btnAddItem").attr('disabled', true);
 $("#btnUpdateItem").attr('disabled', true);
 $("#btnDeleteItem").attr('disabled', true);
+
 /**
  * Item Save
  * Item ID
@@ -48,15 +49,10 @@ function generateItemID() {
 $("#btnAddItem").click(function () {
     let formData = $("#itemForm").serialize();
     $.ajax({
-        url: baseUrlItem + "item",
-        method: "post",
-        data: formData,
-        dataType: "json",
-        success: function (res) {
+        url: baseUrlItem + "item", method: "post", data: formData, dataType: "json", success: function (res) {
             saveUpdateAlert("item", res.message);
             loadAllItems();
-        },
-        error: function (error) {
+        }, error: function (error) {
             unSuccessUpdateAlert("item", JSON.parse(error.responseText).message);
         }
     });
@@ -84,10 +80,7 @@ function setTextFieldValues(code, description, qty, price) {
 function loadAllItems() {
     $("#ItemTable").empty();
     $.ajax({
-        url: baseUrlItem + "item/loadAllItem",
-        method: "GET",
-        dataType: "json",
-        success: function (res) {
+        url: baseUrlItem + "item/loadAllItem", method: "GET", dataType: "json", success: function (res) {
             console.log(res);
             for (let i of res.data) {
                 let code = i.code;
@@ -102,8 +95,7 @@ function loadAllItems() {
             generateItemID();
             setTextFieldValues("", "", "", "");
             console.log(res.message);
-        },
-        error: function (error) {
+        }, error: function (error) {
             let message = JSON.parse(error.responseText).message;
             console.log(message);
         }
@@ -138,7 +130,7 @@ $("#ItemIdSearch").on("keypress", function (event) {
         var search = $("#ItemIdSearch").val();
         $("#ItemTable").empty();
         $.ajax({
-            url: baseUrlItem + "item/searchItemCode/?code="+ search,
+            url: baseUrlItem + "item/searchItemCode/?code=" + search,
             method: "GET",
             contentType: "application/json",
             dataType: "json",
@@ -172,10 +164,7 @@ $("#btnUpdateItem").click(function () {
     let unitPrice = $("#txtItemPrice").val();
 
     var itemOb = {
-        code: code,
-        description: description,
-        qty: qty,
-        unitPrice: unitPrice
+        code: code, description: description, qty: qty, unitPrice: unitPrice
     }
 
     $.ajax({
@@ -210,10 +199,7 @@ $("#btnDeleteItem").click(function () {
     let itUnitPrice = $("#txtItemPrice").val();
 
     const itemOb = {
-        code: itCode,
-        description: itDescription,
-        qty: itQty,
-        unitPrice: itUnitPrice
+        code: itCode, description: itDescription, qty: itQty, unitPrice: itUnitPrice
     }
     $.ajax({
         url: baseUrlItem + "item",
@@ -243,24 +229,16 @@ const regExItemQtyOnHand = /^[0-9]{1,}[.]?[0-9]{1,2}$/;
 
 let ItemsValidations = [];
 ItemsValidations.push({
-    reg: regExItemCode,
-    field: $('#txtItemID'),
-    error: 'Item ID Pattern is Wrong : I00-001'
+    reg: regExItemCode, field: $('#txtItemID'), error: 'Item ID Pattern is Wrong : I00-001'
 });
 ItemsValidations.push({
-    reg: regExItemName,
-    field: $('#txtItemName'),
-    error: 'Item Name Pattern is Wrong : A-z 3-20'
+    reg: regExItemName, field: $('#txtItemName'), error: 'Item Name Pattern is Wrong : A-z 3-20'
 });
 ItemsValidations.push({
-    reg: regExItemPrice,
-    field: $('#txtItemQty'),
-    error: 'Item Qty Pattern is Wrong : 0-9 1-10'
+    reg: regExItemPrice, field: $('#txtItemQty'), error: 'Item Qty Pattern is Wrong : 0-9 1-10'
 });
 ItemsValidations.push({
-    reg: regExItemQtyOnHand,
-    field: $('#txtItemPrice'),
-    error: 'Item Salary Pattern is Wrong : 100 or 100.00'
+    reg: regExItemQtyOnHand, field: $('#txtItemPrice'), error: 'Item Salary Pattern is Wrong : 100 or 100.00'
 });
 
 //disable tab key of all four text fields using grouping selector in CSS

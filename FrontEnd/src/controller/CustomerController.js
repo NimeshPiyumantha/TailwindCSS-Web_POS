@@ -25,7 +25,7 @@ function generateCustomerID() {
         dataType: "json",
         success: function (resp) {
             let id = resp.value;
-            console.log("id" +id);
+            console.log("id" + id);
             let tempId = parseInt(id.split("-")[1]);
             tempId = tempId + 1;
             if (tempId <= 9) {
@@ -80,8 +80,7 @@ function setTextFieldValuesCus(id, name, address, salary) {
 function loadAllCustomer() {
     $("#customerTable").empty();
     $.ajax({
-        url: baseUrlCustomer + "customer/loadAllCustomer",
-        method: "GET", dataType: "json", success: function (res) {
+        url: baseUrlCustomer + "customer/loadAllCustomer", method: "GET", dataType: "json", success: function (res) {
             console.log(res);
 
             for (let i of res.data) {
@@ -132,7 +131,7 @@ $("#searchCusId").on("keypress", function (event) {
         var search = $("#searchCusId").val();
         $("#customerTable").empty();
         $.ajax({
-            url: baseUrlCustomer + "customer/searchCusId/?id="+ search,
+            url: baseUrlCustomer + "customer/searchCusId/?id=" + search,
             method: "GET",
             contentType: "application/json",
             dataType: "json",
