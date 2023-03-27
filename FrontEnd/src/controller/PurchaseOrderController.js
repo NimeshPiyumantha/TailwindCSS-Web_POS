@@ -152,3 +152,33 @@ let total = 0;
 let discount = 0;
 let subTotal = 0;
 
+/**
+ * Logics
+ * Place order
+ * */
+let tableRow = [];
+$("#btnAddToCart").on("click", function () {
+
+    let duplicate = false;
+    for (let i = 0; i < $("#tblAddToCart tr").length; i++) {
+        if ($("#cmbItemCode option:selected").text() === $("#tblAddToCart tr").children(':nth-child(1)')[i].innerText) {
+            duplicate = true;
+
+        }
+    }
+    if (duplicate !== true) {
+
+        loadCartTableDetail();
+        reduceQty($("#buyQty").val());
+        calcTotal($("#buyQty").val() * $("#itemPrice").val());
+        $('#cmbItemCode,#itemName,#itemPrice,#qtyOnHand,#buyQty').val("");
+        $("#btnAddToCart").attr('disabled', true);
+    } else if (duplicate === true) {
+
+        manageQtyOnHand(tableRow.children(':nth-child(4)').text(), $("#buyQty").val());
+        $(tableRow).children(':nth-child(4)').text($("#buyQty").val());
+
+        manageTotal(tableRow.children(':nth-child(5)').text(), $("#buyQty").val() * $("#itemPrice").val());
+        $(tableRow).children(':nth-child(5)').text($("#buyQty").val() * $("#itemPrice").val());
+
+    }
