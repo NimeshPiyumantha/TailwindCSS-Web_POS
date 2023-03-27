@@ -401,4 +401,15 @@ $("#btnPurchase").click(function () {
     total = 0;
 });
 
+/**
+ * Logics
+ * Place order
+ * Clear Method
+ * */
+function clearDetails() {
+    $('#cmbCustomerId,#customerName,#customerAddress,#customerSalary,#cmbItemCode,#itemName,#itemPrice,#qtyOnHand,#buyQty,#txtDiscount,#txtTotal,#txtDiscount,#txtSubTotal,#txtCash,#txtBalance').val("");
+    $("#tblAddToCart").empty();
+    $("#btnPurchase").attr('disabled', true);
+    $("#btnAddToCart").attr('disabled', true);
+}
 
