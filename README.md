@@ -5,40 +5,47 @@
 [![wakatime](https://wakatime.com/badge/user/bde2acba-42bd-46e8-a905-d74c6f260407/project/c1d58a9f-2874-4271-b1f8-11c284e91510.svg)](https://wakatime.com/badge/user/bde2acba-42bd-46e8-a905-d74c6f260407/project/c1d58a9f-2874-4271-b1f8-11c284e91510)
 
 ### - Back End
+
 * Spring
 * Maven
 * Hibernate
 * Lombok
 
 ### - Front End
+
 * HTML
 * Javascript
 * CSS
 * TailwindCSS
 * AJAX
 
-
 ### Link
+
 * 🔗 <a href="https://nimeshpiyumantha.github.io/TailwindCSS-Web_POS/FrontEnd/src/" target="_blank">GitHub Page</a>
 
 ## Home
+
 ![alt text](https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS/blob/master/FrontEnd/assets/ss/Screenshot%20(1).png)
 
 ## Customer
+
 ![alt text](https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS/blob/master/FrontEnd/assets/ss/Screenshot%20(2).png)
 
 ## Item
+
 ![alt text](https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS/blob/master/FrontEnd/assets/ss/Screenshot%20(3).png)
 
 ## Place Order
+
 ![alt text](https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS/blob/master/FrontEnd/assets/ss/Screenshot%20(4).png)
 
 ## Place Order
+
 ![alt text](https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS/blob/master/FrontEnd/assets/ss/Screenshot%20(5).png)
 
 ## Orders View
-![alt text](https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS/blob/master/FrontEnd/assets/ss/Screenshot%20(6).png)
 
+![alt text](https://github.com/NimeshPiyumantha/TailwindCSS-Web_POS/blob/master/FrontEnd/assets/ss/Screenshot%20(6).png)
 
 ### Step up This Project
 
@@ -71,22 +78,24 @@ npx tailwindcss -i ./src/input-style.css -o ./public/output-style.css --watch
 - **First Clone This Project**
 
 - **Next type Terminal**
+
 ```
 npm install
 ```
 
 - **To build once run**
+
 ```
 npm run build
 ```
 
 - **Run the Tailwind CLI to compile the **input.css** during development. The output file is **css/main.css****
+
 ```
 npm run watch-css
 ```
 
 ###
-
 
 ### Clone this repository ✅
 
