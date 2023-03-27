@@ -69,3 +69,25 @@ $.ajax({
 
 });
 
+/** Customer cmb Search */
+$("#cmbCustomerId").click(function () {
+    var search = $("#cmbCustomerId").val();
+    $.ajax({
+        url: baseUrlPlaceOrder + "customer/searchCusId/?id="+ search,
+        method: "GET",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (res) {
+            console.log(res);
+            $("#customerName").val(res.name);
+            $("#customerAddress").val(res.address);
+            $("#customerSalary").val(res.salary);
+        },
+        error: function (error) {
+            let message = JSON.parse(error.responseText).message;
+            console.log(message);
+        }
+    })
+
+});
+
