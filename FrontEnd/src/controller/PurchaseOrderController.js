@@ -40,3 +40,32 @@ function generateOrderID() {
         }
     });
 }
+
+/**
+ * Invoice Details
+ * Customer Select Combo
+ * */
+$("#cmbCustomerId").empty();
+$.ajax({
+    url: baseUrlPlaceOrder + "customer/loadAllCustomer",
+    method: "GET",
+    dataType: "json",
+    success: function (res) {
+        console.log(res);
+        setDates();
+
+        for (let i of res.data) {
+            let id = i.id;
+
+            $("#cmbCustomerId").append(`<option>${id}</option>`);
+        }
+        generateOrderID();
+        console.log(res.message);
+    },
+    error: function (error) {
+        let message = JSON.parse(error.responseText).message;
+        console.log(message);
+    }
+
+});
+
